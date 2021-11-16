@@ -4,12 +4,13 @@
 }
 
 header{
-    height: 164px;
+    height: 56px;
 }
 
 #homeDisplay{
-    height: calc(100vh - 164px);
+    height: calc(100vh - 56px);
     position: relative;
+    margin-top: 56px;
     width: 100%;
     max-width:100%;
     overflow: hidden;
