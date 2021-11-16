@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    height: 164px;
+}
+
+#homeDisplay{
+    height: calc(100vh - 164px);
+    position: relative;
+    width: 100%;
+    max-width:100%;
+    overflow: hidden;
+}
+  
+  
+#box1{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+}
+  
+#box2{
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+}
+  
+#box3{
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 200%;
+}
