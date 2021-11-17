@@ -4,13 +4,13 @@
 }
 
 header{
-    height: 56px;
+    height: 164px;
 }
 
 #homeDisplay{
-    height: calc(100vh - 56px);
+    height: calc(100vh - 164px);
     position: relative;
-    margin-top: 56px;
+    margin-top: 164px;
     width: 100%;
     max-width:100%;
     overflow: hidden;
@@ -39,4 +39,8 @@ header{
     width: 100%;
     position: absolute;
     left: 200%;
+}
+
+#header-ul{
+    display: inline;
 }
