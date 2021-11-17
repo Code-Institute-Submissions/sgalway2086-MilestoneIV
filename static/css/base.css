@@ -18,7 +18,7 @@ header{
   
   
 #box1{
-    background: url("/media/scrollimage2.jpg") no-repeat;
+    background: url("/media/scrollimage1.jpg") no-repeat;
     background-position: center center;
     height: 100%;
     width: 100%;
@@ -27,7 +27,8 @@ header{
 }
   
 #box2{
-    background-color: blue;
+    background: url("/media/scrollimage2.jpg") no-repeat;
+    background-position: center center;
     height: 100%;
     width: 100%;
     position: absolute;
