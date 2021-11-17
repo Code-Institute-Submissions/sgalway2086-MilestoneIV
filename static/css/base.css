@@ -18,7 +18,8 @@ header{
   
   
 #box1{
-    background-color: red;
+    background: url("/media/scrollimage2.jpg") no-repeat;
+    background-position: center center;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -34,7 +35,8 @@ header{
 }
   
 #box3{
-    background-color: green;
+    background: url("/media/scrollimage3.jpg") no-repeat;
+    background-position: center center;
     height: 100%;
     width: 100%;
     position: absolute;
