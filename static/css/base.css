@@ -10,7 +10,6 @@ header{
 #homeDisplay{
     height: calc(100vh - 64px);
     position: relative;
-    margin-top: 64px;
     width: 100%;
     max-width:100%;
     overflow: hidden;
