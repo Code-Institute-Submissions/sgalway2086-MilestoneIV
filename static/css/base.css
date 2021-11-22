@@ -48,6 +48,14 @@ header{
     margin: auto;
 }
 
+.text-black{
+    color: black;
+}
+
+#shop-lav-col-large{
+    height: calc(100vh - 64px);
+}
+
 /* to position mobile navbar */
 #mobile-dropdown-menu{
     position: absolute;
