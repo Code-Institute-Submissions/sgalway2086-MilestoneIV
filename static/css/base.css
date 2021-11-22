@@ -47,3 +47,9 @@ header{
     display: inline;
     margin: auto;
 }
+
+/* to position mobile navbar */
+#mobile-dropdown-menu{
+    position: absolute;
+    left: 0px;
+}
