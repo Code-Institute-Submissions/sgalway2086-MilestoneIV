@@ -28,7 +28,7 @@
     <title>Palestra Fitness{% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class ="container-fluid">
+    <header class ="container-fluid d-none d-lg-block">
       <div class = "row">
         <div id = "topnav" class ="col-10 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href = "{% url 'home' %}" class = "nav-link main-logo-link">
@@ -95,6 +95,11 @@
             </li>
           </ul>
         </div>
+      </div>
+    </header>
+    <header class = "d-xs-block d-lg-none">
+      <div class = "col-2">
+        {% include 'includes/mobilenavbar.html' %}
       </div>
     </header>
     {% if messages %}
