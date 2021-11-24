@@ -68,32 +68,29 @@
           </div>
         </nav>
         </li>
-
-
-
         <li>
           <nav class="navbar text-black">
-            <a class ="nav-link" href = "#" id = "user-options" data-toggle = "dropdown" aria-haspopup = "true" aria-expanded = "false">
-              Account
-            </a>
-            <div class = "dropdown-menu border-0" aria-lavelledby = "user-options">
-              {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                  <a href = "" class = "dropdown-item">Product Management
-                {% endif %}
-                <a href = "" class = "dropdown-item">My Profile</a>
-                <a href = "{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-              {% else %}
-                <a href = "{% url 'account_signup' %}" class = "dropdown-item">Register</a>
-                <a href = "{% url 'account_login' %}" class = "dropdown-item">Login</a>
-              {% endif %}
+            <div class="container">
+              <div class="navbar-header">
+                <a type="button" class="text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-account-bar" aria-expanded="false" aria-controls="navbar" href="#">Account</a>
+              </div>
+              <div id="mobile-account-bar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                      <li class="active"><a class="text-black text-decoration-none" href="#">Product Management</a></li>
+                    {% endif %}
+                    <li><a class="text-black text-decoration-none" href="">My Profile</a></li>
+                    <li><a class="text-black text-decoration-none" href = "{% url 'account_logout' %}">Logout</a></li>
+                  {% else %}
+                    <li><a class="text-black text-decoration-none" href = "{% url 'account_signup' %}">Register</a></li>
+                    <li><a class="text-black text-decoration-none" href = "{% url 'account_login' %}">Login</a></li>
+                  {% endif %}
+                </ul>
+              </div>
             </div>
           </nav>
         </li>
-
-
-
-
       </ul>
     </div>
   </div>
