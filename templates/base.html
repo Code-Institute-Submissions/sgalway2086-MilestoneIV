@@ -30,6 +30,17 @@
   <body>
     <header class ="container-fluid">
       <div class = "row">
+
+
+
+
+        <div class = "col-2 d-lg-none">
+          {% include 'includes/mobilenavbar.html' %}
+        </div>
+
+
+
+
         <div id = "topnav" class ="col-10 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href = "{% url 'home' %}" class = "nav-link main-logo-link">
               <h2>Palestra Fitness</h2>
@@ -95,22 +106,6 @@
             </li>
           </ul>
         </div>
-
-
-        <div class = "d-none col-2">
-          <div class="dropdown">
-            <button type="button" data-toggle="dropdown"><i class="fas fa-bars"></i>
-            <span class="caret"></span></button>
-            <ul id = "mobile-dropdown-menu" class="dropdown-menu ml-auto">
-              <li><a href="#">HTML</a></li>
-              <li><a href="#">CSS</a></li>
-              <li><a href="#">JavaScript</a></li>
-            </ul>
-          </div>
-        </div>
-
-
-
       </div>
     </header>
     {% if messages %}
