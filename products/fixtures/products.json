@@ -1,0 +1,128 @@
+[
+    {
+       "pk":1,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp0053869362",
+          "name":"20KG Home Dumbbells",
+          "description":"A perfect way to squeeze in a quick workout at home, no gym required!",
+          "price":15.99,
+          "category":1,
+          "rating":3.9,
+          "image_url":"https://contents.mediadecathlon.com/p1183101/k$28bf0f41482fecbf3eb6a50bb405059a/weight-training-dumbbells-kit-20-kg.jpg?&f=452x452",
+          "image":"DP8650513642623411M.jpg"
+       }
+    },
+    {
+       "pk":2,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp0673967497",
+          "name":"Bodyweight Workout Station",
+          "description":"All your bodyweight workout needs are here, this station is a great all round station that will surely keep you in tip top shape",
+          "price":299.99,
+          "category":2,
+          "rating":4.3,
+          "image_url":"https://www.gophersport.com/cmsstatic/g-67667-GopherBodyWeightStation-9-10.jpg",
+          "image":"DP0563958472225367M.jpg"
+       }
+    },
+    {
+       "pk":3,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp0053867326",
+          "name":"Under Armour Sports Shirt",
+          "description":"Take on anything with this new sports shirt from Under Armour. All weather conditions suitable, nothing can stop your workout",
+          "price":24.99,
+          "category":3,
+          "rating":4.1,
+          "image_url":"https://img01.ztat.net/article/spp-media-p1/4aed3af5f25f4081ac26a34515cf9bff/3c7909ce9ef94a34b9efe8579cdb4d6b.jpg?imwidth=1800&filter=packshot",
+          "image":"DP6583057382656389M.jpg"
+       }
+    },
+    {
+       "pk":4,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp0086629764",
+          "name":"DLX Athletics Workout Shirt",
+          "description":"Light, comfortable, and durable, this workout shirt is surely ready for anything.",
+          "price":19.99,
+          "category":4,
+          "rating":3.4,     
+          "image_url":"https://www.dlx.co.uk/media/catalog/product/cache/e439ed52504e25256ad184aa1de9c18e/r/e/relays-fatotsn20002-grm-a_1.jpg",
+          "image":"DP3357216843967306M.jpg"
+       }
+    },
+    {
+       "pk":5,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp0083216784",
+          "name":"Optimum Nutrition Whey Protein",
+          "description":"Reach the next level with your workouts with this whey protein. Build mass, and recover faster",
+          "price":24.99,
+          "category":5,
+          "rating":4.1,
+          "image_url":"https://images.hollandandbarrettimages.co.uk/productimages/HB/724/099183_A.jpg",
+          "image":"DP3958391753015623M.jpg"
+       }
+    },
+    {
+       "pk":6,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp0011246642",
+          "name":"Ostrovit Omega3 Supplements",
+          "description":"Keep your mind sharp, and use these fantastic omega3 supplements from Ostrovit",
+          "price":12.99,
+          "category":6,
+          "rating":3.2,
+          "image_url":"https://www.hpnutrition.ie/image/cache/catalog/Ostrovit/NEW/2020/ostrovit-omega3-extreme-600x600.jpg",
+          "image":"DP2552157848708542M.jpg"
+       }
+    },
+    {
+       "pk":7,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp0058639952",
+          "name":"Grenade Salted Caramel Protein Bar",
+          "description":"Protein? Amazing flavour? All in this small package",
+          "price":4.99,
+          "category":7,
+          "rating":3.6,
+          "image_url":"https://digitalcontent.api.tesco.com/v2/media/ghs/9dfe8929-b82c-430b-b692-19c0ac37ced3/606321ea-6fcd-413b-baae-29552f72e7b4_1046085087.jpeg?h=540&w=540",
+          "image":"DP0045386301358903M.jpg"
+       }
+    },
+    {
+        "pk":8,
+        "model":"products.product",
+        "fields":{
+           "sku":"pp0074215087",
+           "name":"Workout Log Book",
+           "description":"Log your workouts, track your goals and progress, this is an essential to a good workout",
+           "price":8.99,
+           "category":8,
+           "rating":3.5,
+           "image_url":"https://m.media-amazon.com/images/I/51gvogxLA2L._AC_SL1040_.jpg",
+           "image":"DP5556883573113634M.jpg"
+        }
+    },
+    {
+        "pk":9,
+        "model":"products.product",
+        "fields":{
+           "sku":"pp0098635813",
+           "name":"Understanding Nutrition",
+           "description":"This book is a perfect introduction to healthy eating, the gateway to a balanced healthy lifestyle",
+           "price":17.99,
+           "category":9,
+           "rating":4.6,
+           "image_url":"https://m.media-amazon.com/images/P/1783240636.01._SCLZZZZZZZ_SX500_.jpg",
+           "image":"DP0215867395763953M.jpg"
+        }
+    }
+]
