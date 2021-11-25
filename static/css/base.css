@@ -72,12 +72,27 @@ header{
     #mobile-header{
         z-index: 5;
         background-color: white;
+        height: 40px;
     }
 
     #mobile-search{
         position: absolute;
         right: 0px;
         top: 0px;
+    }
+
+    #mobile-navbar{
+        width: 250px;
+    }
+
+    #homeDisplay{
+        height: calc(100vh - 40px);
+        margin-top: 40px;
+    }
+
+    .nav-option-mobile{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 }
 
