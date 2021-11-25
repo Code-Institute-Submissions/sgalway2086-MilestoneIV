@@ -1,0 +1,74 @@
+[
+    {
+       "pk":1,
+       "model":"products.category",
+       "fields":{
+          "name":"weights",
+          "friendly_name":"Weights"
+       }
+    },
+    {
+       "pk":2,
+       "model":"products.category",
+       "fields":{
+          "name":"bodyweight_fitness",
+          "friendly_name":"Bodyweight Fitness"
+       }
+    },
+    {
+       "pk":3,
+       "model":"products.category",
+       "fields":{
+          "name":"mens_gym_wear",
+          "friendly_name":"Mens Gym Wear"
+       }
+    },
+    {
+       "pk":4,
+       "model":"products.category",
+       "fields":{
+          "name":"womens_gym_wear",
+          "friendly_name":"Womens Gym Wear"
+       }
+    },
+    {
+       "pk":5,
+       "model":"products.category",
+       "fields":{
+          "name":"protein_supplements",
+          "friendly_name":"Protein Supplements"
+       }
+    },
+    {
+       "pk":6,
+       "model":"products.category",
+       "fields":{
+          "name":"general_health",
+          "friendly_name":"General Health"
+       }
+    },
+    {
+       "pk":7,
+       "model":"products.category",
+       "fields":{
+          "name":"high_protein_food",
+          "friendly_name":"High Protein Food"
+       }
+    },
+    {
+       "pk":8,
+       "model":"products.category",
+       "fields":{
+          "name":"exercise_plans",
+          "friendly_name":"Exercise Plans"
+       }
+    },
+    {
+       "pk":9,
+       "model":"products.category",
+       "fields":{
+          "name":"nutrition_plans",
+          "friendly_name":"Nutrition Plans"
+       }
+    }
+ ]
