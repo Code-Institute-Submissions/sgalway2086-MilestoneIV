@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Catagory(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -12,7 +12,7 @@ class Catagory(models.Model):
         return self.friendly_name
 
 class Product(models.Model):
-    catagory = models.ForeignKey('Catagory', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
