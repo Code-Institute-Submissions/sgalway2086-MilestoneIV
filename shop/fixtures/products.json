@@ -1,7 +1,7 @@
 [
     {
        "pk":1,
-       "model":"products.product",
+       "model":"shop.product",
        "fields":{
           "sku":"pp0053869362",
           "name":"20KG Home Dumbbells",
@@ -15,7 +15,7 @@
     },
     {
        "pk":2,
-       "model":"products.product",
+       "model":"shop.product",
        "fields":{
           "sku":"pp0673967497",
           "name":"Bodyweight Workout Station",
@@ -29,7 +29,7 @@
     },
     {
        "pk":3,
-       "model":"products.product",
+       "model":"shop.product",
        "fields":{
           "sku":"pp0053867326",
           "name":"Under Armour Sports Shirt",
@@ -43,7 +43,7 @@
     },
     {
        "pk":4,
-       "model":"products.product",
+       "model":"shop.product",
        "fields":{
           "sku":"pp0086629764",
           "name":"DLX Athletics Workout Shirt",
@@ -57,7 +57,7 @@
     },
     {
        "pk":5,
-       "model":"products.product",
+       "model":"shop.product",
        "fields":{
           "sku":"pp0083216784",
           "name":"Optimum Nutrition Whey Protein",
@@ -71,7 +71,7 @@
     },
     {
        "pk":6,
-       "model":"products.product",
+       "model":"shop.product",
        "fields":{
           "sku":"pp0011246642",
           "name":"Ostrovit Omega3 Supplements",
@@ -85,7 +85,7 @@
     },
     {
        "pk":7,
-       "model":"products.product",
+       "model":"shop.product",
        "fields":{
           "sku":"pp0058639952",
           "name":"Grenade Salted Caramel Protein Bar",
@@ -99,7 +99,7 @@
     },
     {
         "pk":8,
-        "model":"products.product",
+        "model":"shop.product",
         "fields":{
            "sku":"pp0074215087",
            "name":"Workout Log Book",
@@ -113,7 +113,7 @@
     },
     {
         "pk":9,
-        "model":"products.product",
+        "model":"shop.product",
         "fields":{
            "sku":"pp0098635813",
            "name":"Understanding Nutrition",
