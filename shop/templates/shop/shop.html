@@ -22,8 +22,20 @@
                 <img class = "product-image card-img-top img-fluid" src = "{{ MEDIA_URL }}noimage.jpeg" alt = "{{ product.name }}">
               </a>
             {% endif %}
-            <div>
-              {{ product.name }}
+            <div class = "card-body pb-0 product-name">
+              <h6 class = "mb-0">{{ product.name }}</h6>
+            </div>
+            <div class = "card-footer pt-0 border-0 text-left">
+              <div class = "row">
+                <div class = "col">
+                  <p class = "lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                    {% if product.rating %}
+                      <small class = "text-muted">{{ product.rating }} / 5</small>
+                    {% else %}
+                      <small class = "text-muted">No Rating</small>
+                    {% endif %}
+                </div>
+              </div>
             </div>
           </div>
           {% endfor %}
