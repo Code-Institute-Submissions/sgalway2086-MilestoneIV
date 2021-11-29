@@ -10,10 +10,23 @@
     </div>
     <div class="container col-12 col-md-9">
       <h5>Available</h5>
-        <div class = "row">
-          <div class = "col">
-            {{ products }}
+        <div id = "shop-products-wrap">
+          {% for product in products %}
+          <div class = "product-wrap">
+            {% if product.image %}
+              <a href = "">
+                <img class = "product-image card-img-top img-fluid" src = "{{ product.image.url }}" alt = "{{ product.name }}">
+              </a>
+            {% else %}
+              <a href = "">
+                <img class = "product-image card-img-top img-fluid" src = "{{ MEDIA_URL }}noimage.jpeg" alt = "{{ product.name }}">
+              </a>
+            {% endif %}
+            <div>
+              {{ product.name }}
+            </div>
           </div>
+          {% endfor %}
         </div>
       </div>
     </div>
