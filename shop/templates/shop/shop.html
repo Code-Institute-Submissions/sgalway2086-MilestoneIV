@@ -14,11 +14,11 @@
           {% for product in products %}
           <div class = "product-wrap">
             {% if product.image %}
-              <a href = "">
+              <a href = "{% url 'view_product' product.id %}">
                 <img class = "product-image card-img-top img-fluid" src = "{{ product.image.url }}" alt = "{{ product.name }}">
               </a>
             {% else %}
-              <a href = "">
+              <a href = "{% url 'view_product' product.id %}">
                 <img class = "product-image card-img-top img-fluid" src = "{{ MEDIA_URL }}noimage.jpeg" alt = "{{ product.name }}">
               </a>
             {% endif %}
