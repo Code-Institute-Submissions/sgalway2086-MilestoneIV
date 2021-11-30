@@ -5,10 +5,10 @@
       </div>
       <div id="workout-equipment-bar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a class="text-black text-decoration-none" href="#">Weights</a></li>
-          <li><a class="text-black text-decoration-none" href="">Bodyweight Fitness</a></li>
-          <li><a class="text-black text-decoration-none" href="">Mens Gym Wear</a></li>
-          <li><a class="text-black text-decoration-none" href="">Womens Gym Wear</a></li>
+          <li class="active"><a class="text-black text-decoration-none" href ="{% url 'shop' %}?category=weights">Weights</a></li>
+          <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=bodyweight_fitness">Bodyweight Fitness"</a></li>
+          <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=mens_gym_wear">Mens Gym Wear</a></li>
+          <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=womens_gym_wear">Womens Gym Wear</a></li>
         </ul>
       </div>
     </div>
@@ -20,9 +20,9 @@
       </div>
       <div id="supplement-bar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a class="text-black text-decoration-none" href="#">Protein Supplements</a></li>
-          <li><a class="text-black text-decoration-none" href="">General Health</a></li>
-          <li><a class="text-black text-decoration-none" href="">High Protein Food</a></li>
+          <li class="active"><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=protein_supplements">Protein Supplements</a></li>
+          <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=general_health">General Health</a></li>
+          <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=high_protein_food">High Protein Food</a></li>
         </ul>
       </div>
     </div>
@@ -34,8 +34,8 @@
       </div>
       <div id="plan-bar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a class="text-black text-decoration-none" href="#">Exercise Plans</a></li>
-          <li><a class="text-black text-decoration-none" href="">Nutrition Plans</a></li>
+          <li class="active"><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=exercise_plans">Exercise Plans</a></li>
+          <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=nutrition_plans">Nutrition Plans</a></li>
         </ul>
       </div>
     </div>
