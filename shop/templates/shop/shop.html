@@ -12,22 +12,15 @@
         <h5>Available</h5>
         <div id = "shop-products-wrap">
           <div class = "d-lg-none">
-            <nav class="navbar text-black">
-              <div class="container">
-                <div class="navbar-header">
-                  <a type="button" class="text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#product-sort-bar" aria-expanded="false" aria-controls="navbar" href="#">Sort Products</a>
-                </div>
-                <div id="product-sort-bar" class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a class="text-black text-decoration-none" href ="{% url 'shop' %}">All</a></li>
-                    <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?sort=price&direction=asc">Price (Low to High)</a></li>
-                    <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?sort=price&direction=desc">Price (High to Low)</a></li>
-                    <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?sort=rating&direction=desc">Rating</a></li>
-                    <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?sort=category&direction=asc">Category</a></li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
+            <div class="sort-select-wrapper w-50">
+              <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                  <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                  <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                  <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                  <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating</option>
+                  <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+              </select>
+          </div>
           </div>
           {% for product in products %}
           <div class = "product-wrap">
@@ -49,7 +42,7 @@
                   <p class = "lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                     {% if product.category %}
                     <p class = "small mt-1 mb-0">
-                      <a class = "text-muted" href = "{% url 'shop' %}?category = {{ shop.category.name }}">
+                      <a class = "text-muted" href = "{% url 'shop' %}?category = {{ product.category.name }}">
                         {{ product.category.friendly_name }}
                       </a>
                     </p>
