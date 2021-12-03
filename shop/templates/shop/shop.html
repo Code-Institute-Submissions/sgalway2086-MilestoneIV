@@ -14,11 +14,7 @@
           <div class="container">
             <div class="navbar-header">
               <a type="button" class="text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#product-sort-bar" aria-expanded="false" aria-controls="navbar" href="#">
-                {% if product.category %}
-                  {{ product.category }}
-                {% else %}
-                  Sort Products
-                {% endif %}
+                {% include 'includes/mobilesortbar.html' %}
               </a>
             </div>
             <div id="product-sort-bar" class="collapse navbar-collapse">

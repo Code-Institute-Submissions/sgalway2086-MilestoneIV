@@ -1,0 +1,11 @@
+{% if 'shop?sort=price&direction=asc' in request.get_full_path %}
+    Price (Low to High)
+{% elif 'shop?sort=price&direction=desc' in request.get_full_path %}
+    Price (High to Low)
+{% elif 'shop?sort=rating&direction=desc' in request.get_full_path %}
+    Rating
+{% elif 'shop?sort=category&direction=asc' in request.get_full_path %}
+    Category
+{% else %}
+    Sort Products By
+{% endif %}
