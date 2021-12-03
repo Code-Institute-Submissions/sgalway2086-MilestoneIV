@@ -111,5 +111,9 @@ header{
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
+
+    .mobile-div-top{
+        margin-top: 40px;
+    }
 }
 
