@@ -81,8 +81,9 @@ header{
 }
 
 .product-image{
-    height: 200px;
+    max-height: 200px;
     object-fit: cover;
+    
 }
 
 #bag-wrap{
@@ -131,6 +132,11 @@ header{
 #grand-total-div{
     width: 10%;
     margin: 0% 0% 0% 90%;
+}
+
+.product-title-card{
+    height: 48px;
+    padding: 0px;
 }
 
 @media only screen and (max-width: 992px) {

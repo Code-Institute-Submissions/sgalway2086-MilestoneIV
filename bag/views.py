@@ -1,11 +1,4 @@
 from django.shortcuts import render, redirect
-from django import template
-
-register = template.Library()
-
-@register.filter
-def multiply(value, arg):
-    return value * arg
 
 
 def view_bag(request):
