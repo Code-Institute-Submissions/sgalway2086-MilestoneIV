@@ -98,6 +98,8 @@ header{
 .bag-item-image{
     width: 20%;
     float: left;
+    text-align: center;
+    display: block;
 }
 
 .bag-item-digits{
@@ -106,8 +108,8 @@ header{
 }
 
 .bag-item-image img{
-    height: 230px;
-    width: auto;
+    max-height: 230px;
+    max-width:90%;
     margin: 10px 0px 10px 0px;
 }
 

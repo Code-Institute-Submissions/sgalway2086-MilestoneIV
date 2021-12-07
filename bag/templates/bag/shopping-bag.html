@@ -7,16 +7,16 @@
             {% if bag_items %}
             <div id = "bag-descriptions">
                 <div class = "bag-desc-info">
-                    <p>Product Info</p>
+                    <strong><p>Product Info</p></strong>
                 </div>
                 <div class = "bag-item-digits">
-                    <p>Price</p>
+                    <strong><p>Price</p></strong>
                 </div>
                 <div class = "bag-item-digits">
-                    <p>Qty</p>
+                    <strong><p>Qty</p></strong>
                 </div>
                 <div class = "bag-item-digits">
-                    <p>Subtotal</p>
+                    <strong><p>Subtotal</p></strong>
                 </div>
             </div>
             {% for item in bag_items %}
@@ -41,7 +41,7 @@
             {% endfor %}
             <div id = "grand-total-div">
                 <div>
-                    <h6>Total Price</h6>
+                    <strong><h6>Total Price</h6></strong>
                     <p>{{ grand_total }}</p>
                 </div>
             </div>
