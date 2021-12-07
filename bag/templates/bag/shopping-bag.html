@@ -3,9 +3,29 @@
 {% block content %}
 <div class = "mobile-div-top row">
     <div class = "col">
-        {% if bag_items %}
-        <div class = "table-responsive rounded">
-            {{ bag_items }}
+        <div id = "bag-wrap">
+            {% if bag_items %}
+                {% for item in bag_items %}
+                <div class = "bag-item-wrap">
+                    <div class = "bag-item-image">
+                        <img src = "{{ item.product.image.url }}">
+                    </div>
+                    <div class = "bag-item-info">
+                        <p class = "my-0">{{ item.product.name }}</p>
+                        <p class = "text-muted">{{ item.product.sku|upper }}</p>
+                    </div>
+                    <div class = "bag-item-digits">
+                        <p>${{ item.product.price }}</p>
+                    </div>
+                    <div class = "bag-item-digits">
+                        <p>{{ item.quantity }}</p>
+                    </div>
+                    <div class = "bag-item-digits">
+                        <p>${{ widthratio item.product.price 1 item.quantity }}</p>
+                    </div>
+                </div>
+                </div>
+                {% endfor %}
         </div>
         {% else %}
         <p class = "lead mb-5">Your bag is empty</p>

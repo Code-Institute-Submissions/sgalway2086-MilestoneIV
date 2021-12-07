@@ -85,6 +85,33 @@ header{
     object-fit: cover;
 }
 
+#bag-wrap{
+    width: 90%;
+    margin: 0% 5% 0% 5%;
+}
+
+.bag-item-wrap{
+    width: 100%;
+    height: 250px;
+}
+
+.bag-item-image{
+    width: 20%;
+}
+
+.bag-item-digits{
+    width: 10%;
+}
+
+.bag-item-image img{
+    width: 250px;
+}
+
+.bag-item-info{
+    width: 50%;
+}
+
+
 @media only screen and (max-width: 992px) {
     #mobile-header{
         z-index: 5;
