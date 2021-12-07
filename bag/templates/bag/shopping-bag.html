@@ -1,11 +1,25 @@
 {% extends "base.html" %}
-
+{% load mathfilters %}
 {% block content %}
-<div class = "mobile-div-top row">
-    <div class = "col">
+<div class = "mobile-div-top">
+    <div>
         <div id = "bag-wrap">
             {% if bag_items %}
-                {% for item in bag_items %}
+            <div id = "bag-descriptions">
+                <div class = "bag-desc-info">
+                    <p>Product Info</p>
+                </div>
+                <div class = "bag-item-digits">
+                    <p>Price</p>
+                </div>
+                <div class = "bag-item-digits">
+                    <p>Qty</p>
+                </div>
+                <div class = "bag-item-digits">
+                    <p>Subtotal</p>
+                </div>
+            </div>
+            {% for item in bag_items %}
                 <div class = "bag-item-wrap">
                     <div class = "bag-item-image">
                         <img src = "{{ item.product.image.url }}">
@@ -21,21 +35,25 @@
                         <p>{{ item.quantity }}</p>
                     </div>
                     <div class = "bag-item-digits">
-                        <p>${{ widthratio item.product.price 1 item.quantity }}</p>
+                        <p>${{ item.product.price|mul:item.quantity }}</p>
                     </div>
                 </div>
+            {% endfor %}
+            <div id = "grand-total-div">
+                <div>
+                    <p>{{ grand_total }}</p>
                 </div>
-                {% endfor %}
-        </div>
-        {% else %}
-        <p class = "lead mb-5">Your bag is empty</p>
-        <a href = "{% url 'products' %}" class = "btn btn-outline-black rounded-0 btn-lg">
-            <span class = "icon">
-                <i class = "fas fa-chavron-left"></i>
-            </span>
-            <span class= "text-uppercase">Keep Shopping</span>
-        </a>
-        {% endif %}
+            </div>
+        </div>    
     </div>
+    {% else %}
+    <p class = "lead mb-5">Your bag is empty</p>
+    <a href = "{% url 'products' %}" class = "btn btn-outline-black rounded-0 btn-lg">
+        <span class = "icon">
+            <i class = "fas fa-chavron-left"></i>
+        </span>
+        <span class= "text-uppercase">Keep Shopping</span>
+    </a>
+    {% endif %}
 </div>
 {% endblock %}
