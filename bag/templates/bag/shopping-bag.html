@@ -27,6 +27,9 @@
                     <div class = "bag-item-info">
                         <p class = "my-0">{{ item.product.name }}</p>
                         <p class = "text-muted">{{ item.product.sku|upper }}</p>
+                        {% if item.product.has_sizes %}
+                          <p class = "my-0">Size: {{ item.size|upper }}</p>
+                        {% endif %} 
                     </div>
                     <div class = "bag-item-digits">
                         <p>${{ item.product.price }}</p>
