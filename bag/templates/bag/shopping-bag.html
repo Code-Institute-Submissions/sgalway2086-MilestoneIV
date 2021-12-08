@@ -40,6 +40,9 @@
                             {% csrf_token %}
                             <input type = "submit" value = "Remove">
                             <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
+                            {% if item.product.has_sizes %}
+                                <input type = "hidden" name = "product_size" value = "{{ item.size }}">
+                            {% endif %}
                         </form>
                     </div>
                     <div class = "bag-item-digits">
@@ -50,7 +53,7 @@
             <div id = "grand-total-div">
                 <div>
                     <strong><h6>Total Price</h6></strong>
-                    <p>{{ grand_total }}</p>
+                    <p>${{ grand_total }}</p>
                 </div>
             </div>
         </div>    
