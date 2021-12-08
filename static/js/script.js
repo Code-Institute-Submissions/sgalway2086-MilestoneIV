@@ -34,9 +34,29 @@ function imageScroll(imageScrollSpeed){
         }
       }
     },pause);
-    setTimeout(function(){
-      imageScroll();
-    },5000);
-  }
+  setTimeout(function(){
+    imageScroll();
+  },5000);
+}
   
   /* times and creates the scrolling effect of the 3 divs on the main page */
+
+function hello(){
+  console.log('hello');
+}
+
+function quantityPlusOne(element) {
+  let productCounter = element.previousElementSibling;
+  let checkCounter = parseInt(productCounter .value)
+  if(checkCounter < 99){
+    productCounter.value = parseInt(productCounter .value) + 1;
+  }
+}
+
+function quantityMinusOne(element) {
+  let productCounter = element.nextElementSibling;
+  let checkCounter = parseInt(productCounter .value)
+  if(checkCounter > 1){
+    productCounter.value = parseInt(productCounter .value) - 1;
+  }
+}
