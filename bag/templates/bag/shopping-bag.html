@@ -20,6 +20,7 @@
                 </div>
             </div>
             {% for item in bag_items %}
+            {{ item }}
                 <div class = "bag-item-wrap">
                     <div class = "bag-item-image">
                         <img src = "{{ item.product.image.url }}">
@@ -36,6 +37,11 @@
                     </div>
                     <div class = "bag-item-digits">
                         <p>{{ item.quantity }}</p>
+                        <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
+                            {% csrf_token %}
+                            <input type = "submit" value = "Remove">
+                            <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
+                        </form>
                     </div>
                     <div class = "bag-item-digits">
                         <p>${{ item.product.price|mul:item.quantity }}</p>
