@@ -36,23 +36,25 @@
                     </div>
                     <div class = "bag-item-digits">
                         <p>{{ item.quantity }}</p>
+                    </div>
+                    <div class = "bag-item-digits">
+                        <p>${{ item.product.price|mul:item.quantity }}</p>
+                    </div>
+                    <div class = "bag-item-digits edit-bag-div">
                         <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
                             {% csrf_token %}
-                            <input type = "submit" value = "Remove">
+                            <button id = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
                             <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
                             {% if item.product.has_sizes %}
                                 <input type = "hidden" name = "product_size" value = "{{ item.size }}">
                             {% endif %}
                         </form>
                     </div>
-                    <div class = "bag-item-digits">
-                        <p>${{ item.product.price|mul:item.quantity }}</p>
-                    </div>
                 </div>
             {% endfor %}
             <div id = "grand-total-div">
                 <div>
-                    <strong><h6>Total Price</h6></strong>
+                    <strong><h6>Total</h6></strong>
                     <p>${{ grand_total }}</p>
                 </div>
             </div>

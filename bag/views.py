@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 
 
 def view_bag(request):
@@ -44,3 +43,4 @@ def remove_from_bag(request, item_id):
             bag.pop(item_id)
     request.session['bag'] = bag
     return redirect(redirect_url)
+
