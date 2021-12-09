@@ -6,15 +6,27 @@
 
 {% block content %}
 <div onload="javascript:setSlideImage()" id = "homeDisplay">
-    <div id = "box1" class = "scrollBox">
-
+    <div id = "box1" class = "outer-box scrollBox">
+        <div class = "inner-box">
+            <h2>NEW EXERCISE PLANS</h2>
+            <p>See our new exercise plans, just what you need to get a structured, healthy lifestyle</p>
+            <a class="text-black text-decoration-none" href="{% url 'shop' %}?category=exercise_plans">See now</a>
+        </div>
     </div>
 
-    <div id = "box2" class = "scrollBox">
-      
+    <div id = "box2" class = "outer-box scrollBox">
+        <div class = "inner-box">
+            <h2>NUTRITION PLANS</h2>
+            <p>Hungry for something good? Our new nutrition plans have what you need</p>
+            <a class="text-black text-decoration-none" href="{% url 'shop' %}?category=nutrition_plans">Nutrition Plans</a>
+        </div>
     </div>
-    <div id = "box3" class = "scrollBox">
-      
+    <div id = "box3" class = "outer-box scrollBox">
+        <div class = "inner-box">
+            <h2>ALL NEW</h2>
+            <p>Visit our shop for all you fitness needs. Nutrition, Exercise products, Gym Gear, we have it all!</p>
+            <a class="navbar-header fw-bold text-black text-decoration-none"  href = "{% url 'shop' %}" >Shop</a>
+        </div>
     </div>
 </div>
 {% endblock %}

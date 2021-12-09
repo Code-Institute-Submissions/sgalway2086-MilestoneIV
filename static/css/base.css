@@ -149,6 +149,27 @@ header{
 	outline: inherit;
 }
 
+.home-page-ad{
+    width: 400px;
+    height: auto;
+    background-color: transparent;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.outer-box{
+    position: relative;
+}
+
+.inner-box{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 200px);
+    background-color: crimson;
+    color: white;
+}
+
 @media only screen and (max-width: 992px) {
     #mobile-header{
         z-index: 5;
