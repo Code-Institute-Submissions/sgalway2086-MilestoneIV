@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'mathfilters',
     'checkout',
     'crispy_forms',
+    'stripe'
 ]
 
 MIDDLEWARE = [
