@@ -52,14 +52,40 @@
                     </div>
                 </div>
             {% endfor %}
-            <div id = "grand-total-div">
-                <div>
-                    <strong><h6>Total</h6></strong>
-                    <p>${{ grand_total }}</p>
-                    <a href = "{% url 'checkout' %}">
-                        <p>checkout</p>
-                    </a>
-                </div>
+            <div>
+                <form action = "{% url 'checkout' %}" method = "POST" id = "payment-form">
+                    {% csrf_token %}
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                    {{ order_form.phone_number | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.county | as_crispy_field }}
+                    <div>
+                        {% if user.is_authenticated %}
+                            <label for = "id-save-info">Save delivery to profile</label>
+                            <input id = "id-save-info" name = "save-info">
+                        {% else %}
+                            <label for = "id-save-info">
+                            <a href = "{% url 'account_signup' %}">Create an account</a> or
+                            <a href = "{% url 'account_login' %}">login</a> to save to profile
+                            </label>
+                        {% endif %}
+                    </div>
+                    <div id = "card-element"></div>
+
+                    <div id = "card-errors"></div>
+
+                    <div class =submit-button>
+                        <a href = "{% url 'view_bag' %}">
+                            <p>Adjust bag</p>
+                        </a>
+                        <button id = "submit-button">Make Order</button>
+                        <p>Your card will be charged ${{ grand_total|floatformat:2 }}</p>
+                </form>
             </div>
         </div>    
     </div>
