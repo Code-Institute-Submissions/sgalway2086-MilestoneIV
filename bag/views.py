@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.conf import settings
 
 
 def view_bag(request):

@@ -57,7 +57,7 @@
                 </div>
             {% endfor %}
             <div>
-                <form action = "{{ 'checkout' }}" method = "POST" id = "payment-form">
+                <form action = "{% url 'checkout' %}" method = "POST" id = "payment-form">
                     {% csrf_token %}
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
