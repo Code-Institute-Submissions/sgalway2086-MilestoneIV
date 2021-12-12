@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'stripe',
     'django.contrib.humanize',
-    'django_countries'
+    'django_countries',
+    'profiles'
 ]
 
 MIDDLEWARE = [
