@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'checkout',
     'crispy_forms',
     'stripe',
-    'django.contrib.humanize'
+    'django.contrib.humanize',
+    'django_countries'
 ]
 
 MIDDLEWARE = [
