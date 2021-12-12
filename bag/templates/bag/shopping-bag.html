@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load mathfilters %}
 {% block content %}
+{% load humanize %}
 <div class = "mobile-div-top">
     <div>
         <div id = "bag-wrap">
@@ -35,10 +36,10 @@
                         <p>${{ item.product.price }}</p>
                     </div>
                     <div class = "bag-item-digits">
-                        <p>{{ item.quantity }}</p>
+                        <p>{{ item.quantity|apnumber|capfirst }}</p>
                     </div>
                     <div class = "bag-item-digits">
-                        <p>${{ item.product.price|mul:item.quantity }}</p>
+                        <p>${{ item.product.price|mul:item.quantity|intcomma }}</p>
                     </div>
                     <div class = "bag-item-digits edit-bag-div">
                         <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
@@ -55,7 +56,7 @@
             <div id = "grand-total-div">
                 <div>
                     <strong><h6>Total</h6></strong>
-                    <p>${{ grand_total }}</p>
+                    <p>${{ grand_total|intcomma }}</p>
                     <a href = "{% url 'checkout' %}">
                         <p>checkout</p>
                     </a>

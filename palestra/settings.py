@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'mathfilters',
     'checkout',
     'crispy_forms',
-    'stripe'
+    'stripe',
+    'django.contrib.humanize'
 ]
 
 MIDDLEWARE = [
