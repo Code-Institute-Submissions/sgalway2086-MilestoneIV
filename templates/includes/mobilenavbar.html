@@ -84,7 +84,7 @@
                 <ul class="nav navbar-nav">
                   {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
-                      <li class="active"><a class="text-black text-decoration-none" href="#">Product Management</a></li>
+                      <li class="active"><a class="text-black text-decoration-none" href="{% url 'add_product' %}">Product Management</a></li>
                     {% endif %}
                     <li><a class="text-black text-decoration-none" href="">My Profile</a></li>
                     <li><a class="text-black text-decoration-none" href = "{% url 'account_logout' %}">Logout</a></li>
