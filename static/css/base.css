@@ -187,6 +187,7 @@ header{
 .edit-product-in-view-product{
     color: #a6a6a6;
     float: right;
+    margin: 0px 10px 0 10px;
 }
 
 .edit-product-in-view-product:hover{

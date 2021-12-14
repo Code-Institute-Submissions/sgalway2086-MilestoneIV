@@ -58,6 +58,16 @@
                     {% else %}
                       <small class = "text-muted">No Rating</small>
                     {% endif %}
+                    {% if request.user.is_authenticated %}
+                      {% if request.user.is_superuser %}
+                        <a class = "text-decoration-none class edit-product-in-view-product" href = "{% url 'delete_product' product.id %}">
+                          <span class = "text-danger">Delete</span>
+                        </a>
+                        <a class = "text-decoration-none class edit-product-in-view-product" href = "{% url 'edit_product' product.id %}">
+                          <span class = "text-info">Edit</span>
+                        </a>
+                      {% endif %}
+                    {% endif %}
                 </div>
               </div>
             </div>
