@@ -184,6 +184,11 @@ header{
     top: calc(50% + 133px);
 }
 
+.edit-product-in-view-product{
+    color: black;
+    float: right;
+}
+
 @media only screen and (max-width: 992px) {
     #mobile-header{
         z-index: 5;
