@@ -124,9 +124,15 @@ def delete_product(request, product_id):
 def add_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
+        review_count = product.review_quantity
+        average_rating = product.rating
+        rating = review_count * average_rating
+        new_rating = rating + int(request.POST.get('rating-number'))
+        new_rating = new_rating / (review_count + 1)
+        print(new_rating)
         product.review_quantity += 1
+        product.rating = new_rating
         product.save()
-        print(product.review_quantity)
         messages.success(request, 'Successfully rated product')
         return redirect(reverse('view_product', args=[product.id]))
     else:
