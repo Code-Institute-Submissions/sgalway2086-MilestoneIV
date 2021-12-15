@@ -120,3 +120,14 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted')
     return redirect(reverse('shop'))
+
+def add_review(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        product.review_quantity += 1
+        product.save()
+        print(product.review_quantity)
+        messages.success(request, 'Successfully rated product')
+        return redirect(reverse('view_product', args=[product.id]))
+    else:
+        messages.error(request, 'You must be logged in to leave a review')
