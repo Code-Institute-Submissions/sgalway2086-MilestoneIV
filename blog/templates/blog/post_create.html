@@ -12,12 +12,12 @@
 <div>
     <a href = "{% url 'post_search' %}"><span>Posts</span></a>
     <a href = "{% url 'profile' %}"><span>Orders</span></a>
-    <a href = "{% url 'post_create' %}"><span>Add post</span></a>
 </div>
 <div class="row">
-    <div class="col-12 col-lg-6">
-    </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12">
+        <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form | crispy }}
     </div>
 </div>
 {% endblock %}
