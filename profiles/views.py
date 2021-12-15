@@ -5,6 +5,7 @@ from .forms import UserProfileForm
 from checkout.models import Order
 from django.contrib.auth.decorators import login_required
 
+
 @login_required
 def profile(request):
     profile = get_object_or_404(UserProfile, user=request.user)

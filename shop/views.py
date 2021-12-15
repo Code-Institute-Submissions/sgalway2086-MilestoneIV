@@ -138,4 +138,4 @@ def add_review(request, product_id):
         messages.success(request, 'Successfully rated product')
         return redirect(reverse('view_product', args=[product.id]))
     else:
-        messages.error(request, 'You must be logged in to leave a review')
+        return redirect(reverse('view_product', args=[product.id]))
