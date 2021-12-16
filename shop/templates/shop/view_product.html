@@ -105,17 +105,34 @@
                   {% endif %}
                 </div>
               </form>
-
-              <form method="POST" action="{% url 'add_text_review' product.id %}" enctype="multipart/form-data">
-                {% csrf_token %}
-                <input type="text" id="title" name="title"><br>
-                <input min="1" max="5" type="number" name="rating"><br>
-                <input type="text" id="r_text" name="r_text"><br>
-                <div class="text-right">
-                    <button class="btn btn-black rounded-0" type="submit">Add Review</button>
-                </div>
-            </form>
+              </div>
           </div>
+        </div>
+      <div id = "review-div" class = "row">
+        <div class = "w-100 p-3">
+          <form method="POST" action="{% url 'add_text_review' product.id %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <span>Review Title</span><br>
+            <input type="text" id="title" name="title"><br>
+            <span>Number Rating</span><br>
+            <input value="3" min="1" max="5" type="number" name="rating"><br>
+            <span>Review Text</span><br>
+            <textarea name="r_text" rows="4" cols="50"></textarea>
+            <div class="text-right">
+                <button class="btn btn-black rounded-0" type="submit">Add Review</button>
+            </div>
+            <br>
+        </form>
+        {% for review in reviews %}
+            {% if review.review_for_product_id == product.id%}
+                <div class="border">
+                  <span>{{ review.title }} </span><span>{{ review.rating }}/5</span>
+                  <p>{{ review.review_text }}</p>
+                  <p>Published By: {{ review.user }}</p>
+                </div>
+                <br>
+            {% endif %}
+        {% endfor %}
         </div>
       </div>
     </div>

@@ -222,6 +222,10 @@ header{
     border-radius: 0;
 }
 
+review-div{
+    margin-left:auto;
+}
+
 
 @media only screen and (max-width: 992px) {
     #mobile-header{

@@ -57,9 +57,11 @@ def shop(request):
 
 def view_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.all()
 
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     return render(request, 'shop/view_product.html', context)
