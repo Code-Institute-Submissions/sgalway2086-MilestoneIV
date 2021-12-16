@@ -31,6 +31,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+
 class Subscription(models.Model):
     user = models.OneToOneField(to=User, on_delete=models.CASCADE)
     customer_id = models.CharField(max_length=255)
@@ -38,6 +39,7 @@ class Subscription(models.Model):
 
     def __str__(self):
         return self.user.username
+
 
 class Review(models.Model):
     user = models.CharField(max_length=254, null=False, blank=False)

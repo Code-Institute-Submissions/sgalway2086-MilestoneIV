@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Product, Category
+from .models import Product, Category, Review
 from .forms import ProductForm
 
 
@@ -56,7 +56,6 @@ def shop(request):
     return render(request, 'shop/shop.html', context)
 
 def view_product(request, product_id):
-
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
@@ -121,6 +120,7 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted')
     return redirect(reverse('shop'))
 
+
 def add_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
@@ -139,3 +139,17 @@ def add_review(request, product_id):
         return redirect(reverse('view_product', args=[product.id]))
     else:
         return redirect(reverse('view_product', args=[product.id]))
+
+@login_required
+def add_text_review(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        review = Review()
+        review.review_for_product_id = product_id
+        review.user = request.user
+        review.review_text = request.POST.get('r_text')
+        review.rating = int(request.POST.get('rating'))
+        review.title = request.POST.get('title')
+        review.save()
+        return redirect(reverse('view_product', args=[product.id]))
+    return redirect(reverse('view_product', args=[product.id]))
