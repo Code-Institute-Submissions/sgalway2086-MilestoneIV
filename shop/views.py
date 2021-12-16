@@ -142,16 +142,19 @@ def add_review(request, product_id):
     else:
         return redirect(reverse('view_product', args=[product.id]))
 
-@login_required
+
 def add_text_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
-        review = Review()
-        review.review_for_product_id = product_id
-        review.user = request.user
-        review.review_text = request.POST.get('r_text')
-        review.rating = int(request.POST.get('rating'))
-        review.title = request.POST.get('title')
-        review.save()
-        return redirect(reverse('view_product', args=[product.id]))
-    return redirect(reverse('view_product', args=[product.id]))
+        if request.user.is_authenticated():
+            review = Review()
+            review.review_for_product_id = product_id
+            review.user = request.user
+            review.review_text = request.POST.get('r_text')
+            review.rating = int(request.POST.get('rating'))
+            review.title = request.POST.get('title')
+            review.save()
+            return redirect(reverse('view_product', args=[product.id]))
+        else:
+            messages.error(request, 'Can not submit review. Please Log in')
+            return redirect(reverse('view_product', args=[product.id]))
