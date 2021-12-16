@@ -11,12 +11,10 @@
 <div>
     <form method="POST" action="{% url 'add_post' %}" enctype="multipart/form-data">
     {% csrf_token %}
-        <span>Review Title</span><br>
-        <input type="text" id="title" name="title"><br>
-        <span>Number Rating</span><br>
-        <input value="3" min="1" max="5" type="number" name="rating"><br>
-        <span>Review Text</span><br>
-        <textarea name="r_text" rows="4" cols="50"></textarea>
+        <span>Post Title</span><br>
+        <input type="text" id="post_title" name="post_title"><br>
+        <span>Post Text</span><br>
+        <textarea name="body_text" rows="4" cols="50"></textarea>
         <div class="text-right">
             <button class="btn btn-black rounded-0" type="submit">Add Review</button>
         </div>
