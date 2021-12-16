@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_js %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div>
+    <h3>Recent Posts</h3>
+</div>
+<div>
+    <form method="POST" action="{% url 'add_post' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+        <span>Review Title</span><br>
+        <input type="text" id="title" name="title"><br>
+        <span>Number Rating</span><br>
+        <input value="3" min="1" max="5" type="number" name="rating"><br>
+        <span>Review Text</span><br>
+        <textarea name="r_text" rows="4" cols="50"></textarea>
+        <div class="text-right">
+            <button class="btn btn-black rounded-0" type="submit">Add Review</button>
+        </div>
+        <br>
+    </form>
+</div>
+{% endblock %}

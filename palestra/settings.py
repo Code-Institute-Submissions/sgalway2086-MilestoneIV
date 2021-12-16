@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'stripe',
     'django.contrib.humanize',
     'django_countries',
-    'profiles'
+    'profiles',
+    'blog'
 ]
 
 MIDDLEWARE = [
