@@ -91,7 +91,7 @@ def checkout(request):
         bag = request.session.get('bag', {})
         if not bag:
             messages.error(request, "There's nothing in your bag at the moment")
-            return redirect(reverse('products'))
+            return redirect(reverse('shop'))
 
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
@@ -169,33 +169,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
-
-
-def subscribe_to_product(request, product_id):
-    stripe_public_key = settings.STRIPE_PUBLIC_KEY
-    stripe_secret_key = settings.STRIPE_SECRET_KEY
-    if request.user.is_authenticated:
-        product=Product.objects.get(id=product_id)
-        order_form = OrderForm()
-        template = 'checkout/subscription.html'
-        stripe.api_key = stripe_secret_key
-        intent = stripe.PaymentIntent.create(
-            amount= 100,
-            currency=settings.STRIPE_CURRENCY,
-        )
-        context = {
-            'product': product,
-            'order_form': order_form,
-            'stripe_public_key': stripe_public_key,
-        }
-        return render(request, template, context)
-    else:
-        message.error('You must log in to subscribe')
-
-
-
-
-
-
-
-

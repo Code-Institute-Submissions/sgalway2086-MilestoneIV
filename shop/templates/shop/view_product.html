@@ -65,7 +65,7 @@
                 </a>
               </p>
               {% endif %}
-              <form class = "form" action="{% if product.stripe_subscription_price %}{% url 'subscribe_to_product' product.id %}{% else %}{% url 'add_to_bag' product.id %}"{% endif %}" method = "POST">
+              <form class = "form" action="{% url 'add_to_bag' product.id %}" method = "POST">
                 {% csrf_token %}
                 {% if product.has_sizes  %}
                 <div class = "col-12">
@@ -77,7 +77,18 @@
                     <option value = "l">L</option>
                     <option value = "xl">XL</option>
                   </select>
-               </div>
+                </div>
+              {% endif %}
+              {% if product.has_subscription  %}
+                <div class = "col-12">
+                  <p>Subscription:</p>
+                  <select class = "form-control rount-0 w-50" name = "subscription_time" id = "id_subscription_time">
+                    <option value = "1">1 Month</option>
+                    <option value = "3" selected>3 Months</option>
+                    <option value = "6">6 Months</option>
+                    <option value = "12">12 Months</option>
+                  </select>
+                </div>
               {% endif %}
                 <div class = "fore-row">
                   <div class = "col-12">
@@ -100,9 +111,6 @@
                     <input type = "submit" class = "btn btn-black rounded-0 text-uppercase mt-5" value = "Add to Bag">
                   </div>
                   <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
-                  {% if product.stripe_subscription_price %}
-                  <input type="hidden" name="priceId" value="{{ product.stripe_subscription_price }}" />
-                  {% endif %}
                 </div>
               </form>
               </div>

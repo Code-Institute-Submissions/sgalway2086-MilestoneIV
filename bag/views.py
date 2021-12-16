@@ -33,6 +33,7 @@ def add_to_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     size = None
+    subscription = None
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
     if item_id in list(bag.keys()):
@@ -40,6 +41,10 @@ def remove_from_bag(request, item_id):
             size = request.POST['product_size']
         if size:
             del bag[item_id]['items_by_size'][size]
+        if 'subscription_time' in request.POST:
+            subscription = request.POST['subscription_time']
+        if subscription:
+            del bag[item_id]['subscription_time'][subscription]
         else:
             bag.pop(item_id)
     request.session['bag'] = bag
