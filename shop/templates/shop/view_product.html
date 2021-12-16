@@ -65,7 +65,7 @@
                 </a>
               </p>
               {% endif %}
-              <form class = "form" action="{% url 'add_to_bag' product.id %}" method = "POST">
+              <form class = "form" action="{% if product.stripe_subscription_price %}{% url 'subscribe_to_product' product.id %}{% else %}{% url 'add_to_bag' product.id %}"{% endif %}" method = "POST">
                 {% csrf_token %}
                 {% if product.has_sizes  %}
                 <div class = "col-12">
