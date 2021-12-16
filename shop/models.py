@@ -25,7 +25,7 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     review_quantity = models.DecimalField(default=0, max_digits=10, decimal_places=0)
-    STRIPE_PRICE_ID = models.CharField(max_length=254, null=True, blank=True)
+    stripe_subscription_price = models.CharField(max_length=254, null=True, blank=True)
 
 
     def __str__(self):
@@ -38,3 +38,10 @@ class Subscription(models.Model):
 
     def __str__(self):
         return self.user.username
+
+class Review(models.Model):
+    user = models.CharField(max_length=254, null=False, blank=False)
+    title = models.CharField(default='', max_length=254)
+    review_for_product_id = models.DecimalField(default=0, max_digits=10, decimal_places=0)
+    rating = models.DecimalField(max_digits=1, decimal_places=0, null=True, blank=True)
+    review_text = models.TextField()

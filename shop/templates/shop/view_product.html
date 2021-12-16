@@ -100,6 +100,9 @@
                     <input type = "submit" class = "btn btn-black rounded-0 text-uppercase mt-5" value = "Add to Bag">
                   </div>
                   <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
+                  {% if product.stripe_subscription_price %}
+                  <input type="hidden" name="priceId" value="{{ product.stripe_subscription_price }}" />
+                  {% endif %}
                 </div>
               </form>
           </div>
