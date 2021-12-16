@@ -33,7 +33,11 @@
                         <p class = "my-0">{{ item.product.name }}</p>
                         <p class = "text-muted">{{ item.product.sku|upper }}</p>
                         {% if item.product.has_sizes %}
-                          <p class = "my-0">Size: {{ item.size|upper }}</p>
+                            {% if item.product.has_subscription %}
+                            <p class = "my-0">{{ item.size|upper }} Month subscription</p>
+                            {% else %}
+                            <p class = "my-0">Size: {{ item.size|upper }}</p>
+                            {% endif %}
                         {% endif %} 
                     </div>
                     <div class = "bag-item-digits">
@@ -43,6 +47,9 @@
                         <p>{{ item.quantity|apnumber|capfirst }}</p>
                     </div>
                     <div class = "bag-item-digits">
+                        {% if item.product.has_subscription %}
+                        <p>${{ item.product.price|mul:item.quantity|mul:item.size|intcomma }}</p>
+                        {% else %}
                         <p>${{ item.product.price|mul:item.quantity|intcomma }}</p>
                     </div>
                     <div class = "bag-item-digits edit-bag-div">
@@ -51,7 +58,10 @@
                             <button id = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
                             <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
                             {% if item.product.has_sizes %}
+
                                 <input type = "hidden" name = "product_size" value = "{{ item.size }}">
+                              {% else %}
+                              {% endif %}
                             {% endif %}
                         </form>
                     </div>

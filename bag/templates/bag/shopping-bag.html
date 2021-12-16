@@ -41,13 +41,21 @@
                         {% endif %} 
                     </div>
                     <div class = "bag-item-digits">
-                        <p>${{ item.product.price }}</p>
+                        {% if item.product.has_subscription %}
+                          <p>${{ item.product.price|mul:item.size }}</p>
+                        {% else %}
+                          <p>${{ item.product.price }}</p>
+                        {% endif %}
                     </div>
                     <div class = "bag-item-digits">
                         <p>{{ item.quantity|apnumber|capfirst }}</p>
                     </div>
                     <div class = "bag-item-digits">
-                        <p>${{ item.product.price|mul:item.quantity|intcomma }}</p>
+                        {% if item.product.has_subscription %}
+                            <p>${{ item.product.price|mul:item.quantity|mul:item.size|intcomma }}</p>
+                        {% else %}
+                            <p>${{ item.product.price|mul:item.quantity|intcomma }}</p>
+                        {% endif %}
                     </div>
                     <div class = "bag-item-digits edit-bag-div">
                         <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">

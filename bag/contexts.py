@@ -23,7 +23,11 @@ def bag_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
-                total += quantity * product.price
+                if product.has_subscription != 'Null':
+                    size = int(size)
+                    total += quantity * product.price * size
+                else:
+                    total += quantity * product.price
                 grand_total = total
                 product_count += quantity
                 bag_items.append({

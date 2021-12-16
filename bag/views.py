@@ -33,7 +33,6 @@ def add_to_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     size = None
-    subscription = None
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
     if item_id in list(bag.keys()):
