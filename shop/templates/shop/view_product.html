@@ -2,6 +2,7 @@
 {% load static %}
 {% block extra_js %}
 {% load humanize %}
+{% load mathfilters %}
 <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
 
@@ -72,10 +73,10 @@
                     <div class = "col-12">
                     <p>Subscription:</p>
                     <select class = "form-control rount-0 w-50" name = "product_size" id = "id_product_size">
-                      <option value = "1" selected>1 Month</option>
-                      <option value = "3">3 Months</option>
-                      <option value = "6">6 Months</option>
-                      <option value = "12">12 Months</option>
+                      <option value = "1" selected>1 Month(${{ product.price|mul:1 }})</option>
+                      <option value = "3">3 Months(${{ product.price|mul:3 }})</option>
+                      <option value = "6">6 Months(${{ product.price|mul:6 }})</option>
+                      <option value = "12">12 Months(${{ product.price|mul:12 }})</option>
                     </select>
                   </div>
                   {% else %}
