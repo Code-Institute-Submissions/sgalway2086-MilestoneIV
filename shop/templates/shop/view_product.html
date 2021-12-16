@@ -126,7 +126,7 @@
         {% for review in reviews %}
             {% if review.review_for_product_id == product.id%}
                 <div class="border">
-                  <span>{{ review.title }} </span><span>{{ review.rating }}/5</span>
+                  <p><span>{{ review.title }} </span><span>{{ review.rating }}/5</span></p>
                   <p>{{ review.review_text }}</p>
                   <p>Published By: {{ review.user }}</p>
                 </div>

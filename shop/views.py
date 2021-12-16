@@ -146,13 +146,25 @@ def add_review(request, product_id):
 def add_text_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
-        if request.user.is_authenticated():
+        if request.user.is_authenticated:
             review = Review()
             review.review_for_product_id = product_id
             review.user = request.user
             review.review_text = request.POST.get('r_text')
             review.rating = int(request.POST.get('rating'))
             review.title = request.POST.get('title')
+            review_count = product.review_quantity
+
+            if product.rating:
+                average_rating = product.rating
+            else:
+                average_rating = 0
+            rating = review_count * average_rating
+            new_rating = rating + int(request.POST.get('rating'))
+            new_rating = new_rating / (review_count + 1)
+            product.review_quantity += 1
+            product.rating = new_rating
+            product.save()
             review.save()
             return redirect(reverse('view_product', args=[product.id]))
         else:
