@@ -60,3 +60,4 @@ function quantityMinusOne(element) {
     productCounter.value = parseInt(productCounter .value) - 1;
   }
 }
+

@@ -41,10 +41,6 @@ def remove_from_bag(request, item_id):
             size = request.POST['product_size']
         if size:
             del bag[item_id]['items_by_size'][size]
-        if 'subscription_time' in request.POST:
-            subscription = request.POST['subscription_time']
-        if subscription:
-            del bag[item_id]['subscription_time'][subscription]
         else:
             bag.pop(item_id)
     request.session['bag'] = bag
