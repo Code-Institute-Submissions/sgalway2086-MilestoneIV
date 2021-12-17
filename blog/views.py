@@ -1,12 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from .models import Posts
 import datetime
+from django.contrib import messages
 
 # Create your views here.
 
 
 def blog(request):
-    return render(request, 'blog/blog.html')
+    posts = Posts.objects.all()
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'blog/blog.html', context)
 
 
 
@@ -21,5 +26,4 @@ def add_post(request):
             post.save()
         else:
             messages.error(request, 'Can not post. Please log in')
-        return render(request, 'blog/blog.html')
-
+        return redirect(reverse('blog'))
