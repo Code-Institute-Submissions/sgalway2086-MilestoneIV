@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'django_countries',
     'profiles',
     'blog',
-    'storages'
+    'storages',
 ]
 
 MIDDLEWARE = [

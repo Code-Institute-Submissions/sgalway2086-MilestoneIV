@@ -48,3 +48,103 @@ be more similar to that of the enclosed navbars. Changed From an anchor element 
 6. When creating the bag app there was an issue using the default django template calculations. ${% widthratio item.product.price 1 item.quantity %} in the code originally rounded the subtotal, thus reducing accuracy. The solution was installing mathfilters and changing the code to ${{ item.product.price|mul:item.quantity }}, thus removing the rounding error.
 
 7. When creating the deletion form on the shopping bag, an error occured when trying to delete items of a certain size. Adding a hidden input that would send the product_value was used to resolve the problem. Originally there was an attempt to try use the dictionary key attribute to get the size which did not work.
+
+
+## Deployment
+
+Heroku
+
+1. Log into Heroku
+
+2. Click New and then from there Create new app
+
+3. Name the new app then choose the closest region to host it
+
+4. Go to resources, then type "postgres" into the add-ons section and select "Heroku Postgres", and choose a plan
+
+5. back in gitpod, type in pip3 install dj_database_url
+
+6. Then install "pip3 install psycopg2-binary"
+
+7. Add both to requirements.txt
+
+8. After this, import dj_database_url in settings.py   
+
+9. Set DATABASES (also in settings.py) with default as dj_database_url.parse() and get database name from heroku config vars
+
+10. Run migrations again, as it needs to connect to the new database
+
+11. Use loaddata on fixture files to add them to new database
+
+12. Create superuser for app using python3 manage.py create superuser
+
+13. Add if function in settings.py to know where the app is running and such which database to use
+
+14. Install gunicorn to act as a webserver. Don’t forget to freeze into requirements.
+
+15. Create the procfile in order to interact with heroku, tell it to create dynos etc
+
+16. Login to heroku on the terminal using ‘heroku login’
+
+17. In the terminal write “heroku config:set DISABLE_COLLECTSTATIC=1 –app” with an app name at the end, as to prevent heroku from taking static files when deployed
+
+18. Add ALLOWED_HOST in settings.py and set as the heroku app
+
+19. Create a heroku remote to gitpod, with “heroku git:remote -a ” with the app name after
+
+20. Push to the remote master.
+
+21. Set up to automatically deploy from github using herokus connect to github button in the deploy tab. Search for the repo name and then click add.
+
+22. Set up automatic deploys to ensure the code can automatically be pushed from gitpod
+
+23. Get a randomly generated secret key and add to the heroku config vars
+
+24. Set the secret key to come from the environ
+
+
+### Amazon AWS
+
+1. Set up amazon aws account and create it as a personal account
+
+2. Search for “S3” and click create bucket. Make sure to allow public access
+
+3. Click the name of the bucket and click the properties tab, and select to use this bucket to store a static website. And set it to selected. Fill in some default values for the fields expecting html as these are already elsewhere so will not be needed.
+
+4. Go to permissions, add in code for a CORS configuration.
+
+5. Go to the policy tab and click policy creator to create a policy bucket.
+
+6. Set as S3 bucket policy, all principals set as “*” and action set to getobject
+
+7. Get the amazon resource name and place in previous forms arn form input
+
+
+### Creating bucket user
+
+1. Open up IAM and create a group
+
+2. Select Groups and create a group with a name relevant to the site 
+
+3. Select Policy then create policy.
+
+4. Go to the json tab and select import managed policy. Import s3 full access
+
+5. Go to bucket policy in s3 and get the arn to add into the policy. Click review policy then give a name, description
+
+6. Go to groups and attach the policy to the created group and click permissions and attach policy. Then click attach policy
+Go to users, add user, and give programmatic access. After this attach the user to the group
+Download the csv file supplied with access keys
+
+
+Connecting django to s3
+
+1. Install boto3 and django-storages
+
+2. Add settings to django to allow it to detect AWS. 
+
+3. Go to heroku and add the keys to the config vars
+
+4. Create a custom_settings.py file and import django settings. Add storage information into this file
+ 
+5. In settings.py add all the links and relevant parts to connect the files
