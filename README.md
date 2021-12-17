@@ -137,7 +137,7 @@ Go to users, add user, and give programmatic access. After this attach the user 
 Download the csv file supplied with access keys
 
 
-Connecting django to s3
+### Connecting django to s3
 
 1. Install boto3 and django-storages
 
@@ -146,5 +146,14 @@ Connecting django to s3
 3. Go to heroku and add the keys to the config vars
 
 4. Create a custom_settings.py file and import django settings. Add storage information into this file
- 
+
 5. In settings.py add all the links and relevant parts to connect the files
+
+### Finalising
+1. Go into settings and add code to allow caching within the app
+
+2. Go to s3 and create media folder
+
+3. Inside click upload and add files, then select all images
+
+4. Now add the stripe secret keys to heroku
