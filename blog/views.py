@@ -43,16 +43,21 @@ def add_comment(request, post_id):
         post = get_object_or_404(Posts, pk=post_id)
         comments = Comment.objects.all()
         if request.user.is_authenticated:
+            print(post)
+            print(comments)
             comment = Comment()
             comment.user = request.user
             comment.comment_body = request.POST.get('comment_text')
             comment.post_date = datetime.time()
             comment.post = post_id
             comment.save()
+            post = get_object_or_404(Posts, pk=post_id)
+            comments = Comment.objects.all()
             context = {
                 'post': post,
                 'comments': comments,
             }
+            return render(request, 'blog/view_post.html', context)
         else:
             messages.error(request, 'Can not comment. Please log in')
         return render(request, 'blog/view_post.html', context)

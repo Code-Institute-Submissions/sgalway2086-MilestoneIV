@@ -32,12 +32,13 @@
     </div>
 </div>
 <div class = "col-6 container">
-    {% for comment in comment %}
-
-            <div class = "col-6">
-                <p>COMMENT CHECK</p>
+    {% for comment in comments %}
+        {% if comment.post == post.id %}
+            <div class = "border col-12">
+                <span><strong>{{ comment.user}}</strong></span><span class = "text-muted">  {{ comment.post_date|naturaltime }}</span>
+                <p>{{ comment.comment_body }}</p>
             </div>
-
+        {% endif %}
     {% endfor %}
 </div>
 {% endblock %}

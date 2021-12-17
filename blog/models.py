@@ -8,7 +8,6 @@ class Posts(models.Model):
     body_text = models.TextField()
 
 
-
 class Comment(models.Model):
     user = models.CharField(max_length=254, null=False, blank=False)
     comment_body = models.TextField()
