@@ -37,9 +37,11 @@ def view_post(request, post_id):
     }
     return render(request, 'blog/view_post.html', context)
 
+
 def add_comment(request, post_id):
     if request.method == 'POST':
         post = get_object_or_404(Posts, pk=post_id)
+        comments = Comment.objects.all()
         if request.user.is_authenticated:
             comment = Comment()
             comment.user = request.user
@@ -47,7 +49,6 @@ def add_comment(request, post_id):
             comment.post_date = datetime.time()
             comment.post = post_id
             comment.save()
-            comments = Comment.objects.all()
             context = {
                 'post': post,
                 'comments': comments,
@@ -55,12 +56,4 @@ def add_comment(request, post_id):
         else:
             messages.error(request, 'Can not comment. Please log in')
         return render(request, 'blog/view_post.html', context)
-
-    post = get_object_or_404(Posts, pk=post_id)
-    comments = Comment.objects.all()
-    context = {
-        'post': post,
-        'comments': comments,
-    }
-
     return render(request, 'blog/view_post.html', context)

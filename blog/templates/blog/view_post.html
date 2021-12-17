@@ -32,12 +32,12 @@
     </div>
 </div>
 <div class = "col-6 container">
-    {% for comment in comments %}
-        {% if comment.post == post.id %}
+    {% for comment in comment %}
+
             <div class = "col-6">
                 <p>COMMENT CHECK</p>
             </div>
-        {% endif %}
+
     {% endfor %}
 </div>
 {% endblock %}
