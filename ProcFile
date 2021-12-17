@@ -1,1 +1,0 @@
-web: gunicorn milestoneiv.wsgi:application

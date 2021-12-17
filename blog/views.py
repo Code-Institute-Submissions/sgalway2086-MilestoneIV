@@ -3,8 +3,6 @@ from .models import Posts, Comment
 import datetime
 from django.contrib import messages
 
-# Create your views here.
-
 
 def blog(request):
     posts = Posts.objects.all()
@@ -12,7 +10,6 @@ def blog(request):
         'posts': posts,
     }
     return render(request, 'blog/blog.html', context)
-
 
 
 def add_post(request):
@@ -27,6 +24,7 @@ def add_post(request):
         else:
             messages.error(request, 'Can not post. Please log in')
         return redirect(reverse('blog'))
+
 
 def view_post(request, post_id):
     post = get_object_or_404(Posts, pk=post_id)
