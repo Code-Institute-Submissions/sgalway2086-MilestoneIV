@@ -1,1 +1,1 @@
-web: gunicorn milestoneiv.wsgi:app
+web: gunicorn palestra.wsgi:app
