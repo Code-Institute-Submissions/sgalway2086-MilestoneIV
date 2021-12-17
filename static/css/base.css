@@ -227,6 +227,22 @@ review-div{
 }
 
 
+footer{
+    background-color: #0f0f0f;
+    overflow: auto;
+}
+
+#footerbox{
+    float: right;
+    margin: 10px;
+}
+
+#footerbox a{
+    color: #f0f0f0;
+    font-size: 30px;
+}
+
+
 @media only screen and (max-width: 992px) {
     #mobile-header{
         z-index: 5;
