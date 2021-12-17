@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Posts
 import datetime
 from django.contrib import messages
@@ -27,3 +27,12 @@ def add_post(request):
         else:
             messages.error(request, 'Can not post. Please log in')
         return redirect(reverse('blog'))
+
+def view_post(request, post_id):
+    post = get_object_or_404(Posts, pk=post_id)
+
+    context = {
+        'post': post,
+    }
+
+    return render(request, 'blog/view_post.html', context)

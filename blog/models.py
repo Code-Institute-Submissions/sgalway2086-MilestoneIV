@@ -10,3 +10,11 @@ class Posts(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class Comment(models.Model):
+    user = models.CharField(max_length=254, null=False, blank=False)
+    comment_body = models.TextField()
+    post_date = models.DateTimeField(auto_now_add=True)
+    post = models.CharField(max_length=80, null=False, blank=False)

@@ -10,5 +10,15 @@ class BlogAdmin(admin.ModelAdmin):
         'post_date',
         'body_text',
     )
-admin.site.register(Posts, BlogAdmin)
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = (
+        'user',
+        'comment_body',
+        'post_date',
+        'post',
+    )
+
+
+admin.site.register(Posts, BlogAdmin)
+admin.site.register(Comment, CommentAdmin)
