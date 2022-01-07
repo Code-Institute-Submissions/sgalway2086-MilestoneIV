@@ -1,1 +1,1 @@
-web: gunicorn palestra.wsgi:app
+web: gunicorn palestra:app

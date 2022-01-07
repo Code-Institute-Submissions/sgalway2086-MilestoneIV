@@ -1,6 +1,52 @@
 # Milestone 4
 
+## User Stories
 
+### External user’s goal:
+1. To join a fitness community and purchase exercise plans and
+merchandise
+
+2. Easy access to a wide range of fitness related merchandise and goods
+
+3. Strong features with a draw to keep coming back go
+
+4. The ability to buy subscriptions in the store
+
+
+### Site owner's goal:
+
+1. Build an active community around the product based on
+subscription and individual payments models
+2. Sell
+3. Exercise plans
+4. Nutrition Plans
+5. Nutrition and exercise products
+
+
+
+## Answers to user stories
+
+### External user
+
+1. Joining a community was made very possibile by the ability to join forums, comment and post
+
+2. The shop is the most prominant part of the site arguably and very accessable to all users 
+
+3. Very strong features that make coming back to the site, for any number of different uses very tempting to a user and creates a good sense of variety
+
+4. Subscriptions and their skus are listed on the store where the user can find them very easily.
+
+### Site owner
+
+1. The community is able to be very active and discuss products readily in the forums
+
+2. The shop makes selling a wide range of products very simple
+
+3. The store has an entire section dedicated to exercise plans meaning they cant be missed. And with a prominant advertisement on the homepage
+
+4. As with the exercise plans, the nutrition plans have their own section and are very much able to be accessed with ease
+
+5. The other sections of the store dedicated to these types of fitness merchandise are available and featured prominantly
 
 ## Bug report
 
