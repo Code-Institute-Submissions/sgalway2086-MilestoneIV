@@ -175,6 +175,7 @@ header{
     top: calc(50% - 150px);
     left: calc(50% - 200px);
     color: white;
+    filter: none;
     z-index: 999;
 }
 
