@@ -283,6 +283,11 @@ footer{
     width: 30em;
 }
 
+#add-post-text{
+    height: 4em;
+    width: 30em;
+}
+
 @media only screen and (max-width: 1150px) {
     #header-ul{
         display: inline;
@@ -362,6 +367,11 @@ footer{
         height: 4em;
         width: 20em;
     }
+
+    #add-post-text{
+        height: 4em;
+        width: 20em;
+    }
 }
 
 @media only screen and (max-width: 440px) {
@@ -385,6 +395,11 @@ footer{
     }
 
     #leave-comment-text{
+        height: 4em;
+        width: 16em;
+    }
+
+    #add-post-text{
         height: 4em;
         width: 16em;
     }
