@@ -304,7 +304,7 @@ footer{
     }
 
     #homeDisplay{
-        height: calc(100vh - 40px);
+        height: calc(100vh - 105px);
         margin-top: 40px;
     }
 
@@ -343,5 +343,4 @@ footer{
         top: calc(50% - 150px);
         left: calc(50% - 150px);
     }
-    
 }
