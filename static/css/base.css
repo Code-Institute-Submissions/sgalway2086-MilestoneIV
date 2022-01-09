@@ -289,7 +289,7 @@ footer{
 
 #add-post-text{
     height: 4em;
-    width: 30em;
+    width: 24em;
 }
 
 @media only screen and (max-width: 1150px) {
@@ -377,7 +377,7 @@ footer{
 
     #add-post-text{
         height: 4em;
-        width: 20em;
+        width: 16em;
     }
 }
 
@@ -408,6 +408,6 @@ footer{
 
     #add-post-text{
         height: 4em;
-        width: 16em;
+        width: 12em;
     }
 }
