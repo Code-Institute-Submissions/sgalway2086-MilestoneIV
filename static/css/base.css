@@ -84,7 +84,6 @@ header{
 .product-image{
     max-height: 200px;
     object-fit: cover;
-    
 }
 
 #bag-wrap{
@@ -274,17 +273,13 @@ footer{
     z-index: 9999;
 }
 
-#mobile-navbar{
-    z-index: 9999;
-}
-
 @media only screen and (max-width: 1150px) {
     #header-ul{
         display: inline;
         margin: auto;
         font-size: 12px;
     }
-}    
+}
 
 @media only screen and (max-width: 992px) {
     #mobile-header{
@@ -297,10 +292,12 @@ footer{
         position: absolute;
         right: 0px;
         top: 0px;
+        z-index: 9999;
     }
 
     #mobile-navbar{
         width: 250px;
+        z-index: 9999;
     }
 
     #homeDisplay{
@@ -311,6 +308,7 @@ footer{
     .nav-option-mobile{
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+        z-index: 9999;
     }
 
     .mobile-div-top{
@@ -327,10 +325,16 @@ footer{
     }
 
     #overlay{
-        height: calc(100% - 40px);
+        height: calc(100% - 105px);
         position: absolute;
         left: 0px;
         top: 40px;
+    }
+    
+    .product-wrap{
+        float: left;
+        width: 46%;
+        margin: 0px 2% 20px 2%;
     }
 }
 
