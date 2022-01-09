@@ -8,15 +8,19 @@
     </div>
 </div>
 <div class = "border col-6 container">
-    <div class = "col-6">
-        <span class = "h4"><strong>{{ post.post_title }}  </strong></span>
-        <span class = "text-muted">  Posted by {{ post.poster }}</span><br>
+    <div class = "row">
+        <div class = "col-6">
+            <span class = "h4"><strong>{{ post.post_title }}  </strong></span>
+            <span class = "text-muted">  Posted by {{ post.poster }}</span><br>
+        </div>
+        <div class = "col-6">
+            {{ post.post_date|naturalday }}
+        </div>
     </div>
-    <div class = "col-6">
-        {{ post.post_date|naturalday }}
-    </div>
-    <div class = "col-12">
-        <p>{{ post.body_text }}</p><br>
+    <div class = "row">
+        <div class = "col-12">
+            <p>{{ post.body_text }}</p><br>
+        </div>
     </div>
 </div><br>
 <div class = "col-6 container">
