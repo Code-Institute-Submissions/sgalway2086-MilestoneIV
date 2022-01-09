@@ -275,7 +275,7 @@ footer{
 
 #review-text{
     height: 4em;
-    width: 50em;
+    width: 30em;
 }
 
 @media only screen and (max-width: 1150px) {
@@ -365,6 +365,6 @@ footer{
 
     #review-text{
         height: 4em;
-        width: 30em;
+        width: 20em;
     }
 }
