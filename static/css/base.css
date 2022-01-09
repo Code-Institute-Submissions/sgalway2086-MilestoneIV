@@ -23,6 +23,7 @@ header{
 #box1{
     background: url("/media/scrollingimage/scrollimage1.jpg") no-repeat;
     background-position: center center;
+    filter: brightness(70%);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -32,6 +33,7 @@ header{
 #box2{
     background: url("/media/scrollingimage/scrollimage2.jpg") no-repeat;
     background-position: center center;
+    filter: brightness(70%);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -41,6 +43,7 @@ header{
 #box3{
     background: url("/media/scrollingimage/scrollimage3.jpg") no-repeat;
     background-position: center center;
+    filter: brightness(70%);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -252,15 +255,7 @@ footer{
     width: 100%;
 }
 
-#overlay{
-    height: calc(100% - 64px);
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    top: 64px;
-    background-color: rgba(0,0,0,0.7);
-    z-index: 800;
-}
+
 
 .button-home{
     background-color: #248bc6;
