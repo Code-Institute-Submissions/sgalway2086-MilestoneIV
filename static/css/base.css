@@ -252,8 +252,19 @@ footer{
     position: absolute;
     left: 0px;
     top: 64px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     z-index: 800;
+}
+
+.button-home{
+    background-color: #248bc6;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 
