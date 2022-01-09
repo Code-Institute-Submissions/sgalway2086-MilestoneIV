@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+.nav-zindex{
+    z-index: 99999;
+}
+
 header{
     height: 64px;
 }
@@ -323,7 +327,10 @@ footer{
     .nav-option-mobile{
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
-        z-index: 9999;
+    }
+
+    .nav-option-mobile div{
+        z-index: 99999;
     }
 
     .mobile-div-top{
