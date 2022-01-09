@@ -16,7 +16,7 @@
     <div class="container col-12 col-lg-9">
       <h5>{{ product.name }}</h5>
       <div class = "row">
-        <div class = "col-4">
+        <div class = "col-10 col-m-4">
           {% if product.image %}
             <a href= "{{ product.image.url }}" target="_blank">
               <img class = "product-image-view-page card-img-top img-fluid" src = "{{ product.image.url }}" alt = "{{ product.name }}">
@@ -25,7 +25,7 @@
             <img class = "product-image-view-page card-img-top img-fluid" src = "{{ MEDIA_URL }}noimage.png" alt = "{{ product.name }}">
           {% endif %}
         </div>
-        <div class = "col-5">
+        <div class = "col-10 col-m-5">
           <div class = "product-details-container mb-5 mt-md-5">
             <p class ="mb-0">
               {{ product.name }}
