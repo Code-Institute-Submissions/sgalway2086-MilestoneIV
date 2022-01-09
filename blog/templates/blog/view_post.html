@@ -23,12 +23,12 @@
         </div>
     </div>
 </div><br>
-<div class = "col-6 container">
-    <div class = "col-6">
+<div class = "col-12 col-m-10 col-lg-6 container">
+    <div class = "col-12 col-m-10 col-lg-6">
         <form method="POST" action="{% url 'add_comment' post.id %}" enctype="multipart/form-data">
             {% csrf_token %}
             <span>Leave a Comment</span><br>
-            <textarea name="comment_text" rows="4" cols="50"></textarea>
+            <textarea id = "leave-comment-text" name="comment_text"></textarea>
             <div class="text-right">
                 <button class="btn btn-black rounded-0" type="submit">Send</button>
                 <input type = "hidden" value = "{{ post.id }}">
