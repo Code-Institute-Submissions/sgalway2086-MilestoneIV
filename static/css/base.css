@@ -243,7 +243,17 @@ footer{
 }
 
 .allauth-base-wrap{
-    min-height: calc(100% - 130px);
+    height: calc(100% - 130px);
+}
+
+#overlay{
+    height: calc(100% - 64px);
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 64px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 800;
 }
 
 
