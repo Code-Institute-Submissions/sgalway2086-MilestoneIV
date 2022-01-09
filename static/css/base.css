@@ -347,6 +347,12 @@ footer{
     }
 }
 
+@media only screen and (max-width: 530px) {
+    #review-text{
+        height: 4em;
+        width: 20em;
+    }
+}
 
 @media only screen and (max-width: 440px) {
     .inner-box{
