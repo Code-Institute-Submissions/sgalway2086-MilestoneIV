@@ -269,6 +269,10 @@ footer{
     font-size: 16px;
 }
 
+.min-height-fix{
+    min-height: calc(100% - 130px);
+}
+
 @media only screen and (max-width: 1150px) {
     #header-ul{
         display: inline;
@@ -331,6 +335,10 @@ footer{
         float: left;
         width: 46%;
         margin: 0px 2% 20px 2%;
+    }
+
+    .min-height-fix{
+        min-height: calc(100% - 105px);
     }
 }
 
