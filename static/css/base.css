@@ -273,6 +273,11 @@ footer{
     min-height: calc(100% - 130px);
 }
 
+#review-text{
+    height: 4em;
+    width: 50em;
+}
+
 @media only screen and (max-width: 1150px) {
     #header-ul{
         display: inline;
@@ -336,7 +341,7 @@ footer{
         width: 46%;
         margin: 0px 2% 20px 2%;
     }
-    
+
     .min-height-fix{
         min-height: calc(100% - 105px);
     }
@@ -356,5 +361,10 @@ footer{
         float: left;
         width: 96%;
         margin: 0px 2% 20px 2%;
+    }
+
+    #review-text{
+        height: 4em;
+        width: 30em;
     }
 }

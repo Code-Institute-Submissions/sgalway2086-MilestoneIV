@@ -13,7 +13,7 @@
       <h5>Product Types</h5>
       {% include 'includes/shopnavlarge.html' %}
     </div>
-    <div class="container col-12 col-lg-9">
+    <div class="container col-12 col-lg-9 mobile-div-top">
       <h5>{{ product.name }}</h5>
       <div class = "row">
         <div class = "col-10 col-m-4">
@@ -127,7 +127,7 @@
             <span>Number Rating</span><br>
             <input value="3" min="1" max="5" type="number" name="rating"><br>
             <span>Review Text</span><br>
-            <textarea name="r_text" rows="4" cols="50"></textarea>
+            <textarea id = "review-text" name="r_text"></textarea>
             <div class="text-right">
                 <button class="btn btn-black rounded-0" type="submit">Add Review</button>
             </div>
