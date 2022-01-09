@@ -21,25 +21,24 @@
                 </div>
             </div>
             {% for item in bag_items %}
-                <div class = "bag-item-wrap row">
-                        <div class = "bag-item-image">
-                            {% if item.product.image %}
-                                <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
-                            {% else %}
-                                <img src = "{{ MEDIA_URL }}noimage.png" alt = "{{ item.product.name }}">
-                            {% endif %}
-                        </div>
-                        <div class = "bag-item-info">
-                            <p class = "my-0">{{ item.product.name }}</p>
-                            <p class = "text-muted">{{ item.product.sku|upper }}</p>
-                            {% if item.product.has_sizes %}
-                              {% if item.product.has_subscription %}
+                <div class = "bag-item-wrap">
+                    <div class = "bag-item-image">
+                        {% if item.product.image %}
+                            <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
+                        {% else %}
+                            <img src = "{{ MEDIA_URL }}noimage.png" alt = "{{ item.product.name }}">
+                        {% endif %}
+                    </div>
+                    <div class = "bag-item-info">
+                        <p class = "my-0">{{ item.product.name }}</p>
+                        <p class = "text-muted">{{ item.product.sku|upper }}</p>
+                        {% if item.product.has_sizes %}
+                            {% if item.product.has_subscription %}
                                 <p class = "my-0">{{ item.size }} Month Subscription</p>
-                              {% else %}
+                            {% else %}
                                 <p class = "my-0">Size: {{ item.size|upper }}</p>
-                              {% endif %}
-                            {% endif %} 
-                        </div>
+                            {% endif %}
+                        {% endif %} 
                     </div>
                     <div class = "bag-item-digits">
                         {% if item.product.has_subscription %}
