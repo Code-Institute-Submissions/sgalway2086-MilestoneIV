@@ -347,4 +347,10 @@ footer{
         top: calc(50% - 150px);
         left: calc(50% - 150px);
     }
+
+    .product-wrap{
+        float: left;
+        width: 96%;
+        margin: 0px 2% 20px 2%;
+    }
 }
