@@ -336,7 +336,7 @@ footer{
         width: 46%;
         margin: 0px 2% 20px 2%;
     }
-
+    
     .min-height-fix{
         min-height: calc(100% - 105px);
     }
