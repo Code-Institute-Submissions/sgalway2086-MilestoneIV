@@ -222,7 +222,7 @@ header{
     border-radius: 0;
 }
 
-review-div{
+#review-div{
     margin-left:auto;
 }
 
@@ -240,6 +240,10 @@ footer{
 #footerbox a{
     color: #f0f0f0;
     font-size: 30px;
+}
+
+.allauth-base-wrap{
+    min-height: calc(100% - 130px);
 }
 
 
