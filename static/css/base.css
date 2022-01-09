@@ -64,6 +64,7 @@ header{
 #mobile-dropdown-menu{
     position: absolute;
     left: 0px;
+    z-index: 9999;
 }
 
 #shop-products-wrap{
@@ -168,7 +169,7 @@ header{
     top: calc(50% - 150px);
     left: calc(50% - 200px);
     color: white;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .allauth-base-wrap{
@@ -316,5 +317,22 @@ footer{
     .edit-bag-div{
         text-align: center;
     }
+
+    #overlay{
+        height: calc(100% - 40px);
+    }
 }
 
+
+@media only screen and (max-width: 440px) {
+    .inner-box{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: calc(50% - 150px);
+        left: calc(50% - 150px);
+        color: white;
+        z-index: 999;
+    }
+    
+}
