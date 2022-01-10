@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+.bag-info-small{
+    display: none;
+}
+
 .nav-zindex{
     z-index: 99999;
 }
