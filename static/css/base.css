@@ -12,6 +12,10 @@ header{
     height: 64px;
 }
 
+#message-container{
+    padding-left: 20px;
+}
+
 #homeDisplay{
     height: calc(100vh - 64px);
     position: relative;
@@ -317,6 +321,10 @@ footer{
     #mobile-header{
         background-color: white;
         height: 40px;
+    }
+
+    .message-container{
+        margin-top: 40px;
     }
 
     #bag-mobile-nav{
