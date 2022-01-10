@@ -309,6 +309,12 @@ footer{
     width: 24em;
 }
 
+#no-item-in-bag{
+    text-align:center;
+    margin-top: calc(50%-63px);
+    margin-bottom: calc(50%-63px);
+}
+
 @media only screen and (max-width: 1200px) {
     #header-ul{
         display: inline;
