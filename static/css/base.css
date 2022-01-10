@@ -190,9 +190,8 @@ header{
     width: 320px;
     display: inline-block;
     margin: 0 auto;
-    position: absolute;
-    left: calc(50% - 160px);
-    top: calc(50% + 133px);
+    margin-top: calc(50vh - 160px); 
+    margin-bottom: calc(50vh - 160px);
 }
 
 .edit-product-in-view-product{
