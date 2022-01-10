@@ -271,6 +271,17 @@ footer{
     font-size: 16px;
 }
 
+.button-general{
+    background-color: #248bc6;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 .min-height-fix{
     min-height: calc(100% - 130px);
 }
@@ -372,7 +383,12 @@ footer{
     }
 
     .bag-item-image{
-        width: 50%;
+        width: 100%;
+    }
+
+    #grand-total-div{
+        width: 60%;
+        margin: 0% 20% 0% 20%;
     }
 }
 

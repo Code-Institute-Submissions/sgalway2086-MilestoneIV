@@ -6,7 +6,7 @@
     <div>
         <div id = "bag-wrap min-height-fix">
             {% if bag_items %}
-            <div id = "bag-descriptions">
+            <div id = "bag-info-large bag-descriptions">
                 <div class = "bag-desc-info">
                     <strong><p>Product Info</p></strong>
                 </div>
@@ -68,12 +68,8 @@
                         </form>
                     </div>
                 </div>
-
-
-            
-
                 <div class = "bag-info-small container">
-                    <div class = "row">
+                    <div class = "w-100 row">
                         <div class = "bag-item-image col-6">
                             {% if item.product.image %}
                                 <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
@@ -93,7 +89,7 @@
                             {% endif %} 
                         </div>
                     </div>
-                    <div class = "row">
+                    <div class = "w-100 row">
                         <div class = "col-4">
                             <p>Price</p>
                         </div>
@@ -106,7 +102,7 @@
                         <div class = "col-1">
                         </div>
                     </div>
-                    <div class = "row">
+                    <div class = "w-100 row">
                         <div class = "col-4">
                             {% if item.product.has_subscription %}
                             <p>${{ item.product.price|mul:item.size }}</p>
@@ -136,14 +132,12 @@
                         </div>
                     </div>
                 </div>
-
-            
             {% endfor %}
             <div id = "grand-total-div">
                 <div>
                     <strong><h6>Total</h6></strong>
                     <p>${{ grand_total|intcomma }}</p>
-                    <a href = "{% url 'checkout' %}">
+                    <a class ="button-general" href = "{% url 'checkout' %}">
                         <p>checkout</p>
                     </a>
                 </div>
