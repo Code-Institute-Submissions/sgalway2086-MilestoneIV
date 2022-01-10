@@ -365,6 +365,10 @@ footer{
     .bag-info-small{
         display: block;
     }
+
+    .bag-item-image{
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 530px) {
