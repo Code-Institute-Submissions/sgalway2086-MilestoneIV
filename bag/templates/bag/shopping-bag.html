@@ -134,9 +134,9 @@
                 </div>
             {% endfor %}
             <div id = "grand-total-div">
-                <div>
-                    <strong><h6>Total</h6></strong>
-                    <p>${{ grand_total|intcomma }}</p>
+                <div class = "grand-total-center">
+                    <strong><h6>Total: </strong>${{ grand_total|intcomma }}</h6>
+                    <p></p>
                     <a class ="button-general" href = "{% url 'checkout' %}">
                         <p>checkout</p>
                     </a>
