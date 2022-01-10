@@ -21,15 +21,15 @@
                 </div>
             </div>
             {% for item in bag_items %}
-                <div class = "col-xs-12 bag-item-wrap">
-                    <div class = "bag-item-image">
+                <div class = "row bag-item-wrap">
+                    <div class = "col-xs-6 bag-item-image">
                         {% if item.product.image %}
                             <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
                         {% else %}
                             <img src = "{{ MEDIA_URL }}noimage.png" alt = "{{ item.product.name }}">
                         {% endif %}
                     </div>
-                    <div class = "col-xs-12 bag-item-info">
+                    <div class = "col-xs-6 bag-item-info">
                         <p class = "my-0">{{ item.product.name }}</p>
                         <p class = "text-muted">{{ item.product.sku|upper }}</p>
                         {% if item.product.has_sizes %}
