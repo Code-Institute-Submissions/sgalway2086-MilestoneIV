@@ -6,7 +6,7 @@
     <div>
         <div id = "bag-wrap min-height-fix">
             {% if bag_items %}
-            <div class = "bag-info-large" id = "bag-descriptions">
+            <div id = "bag-descriptions">
                 <div class = "bag-desc-info">
                     <strong><p>Product Info</p></strong>
                 </div>
@@ -22,14 +22,14 @@
             </div>
             {% for item in bag_items %}
                 <div class = "bag-item-wrap">
-                    <div class = "col-xs-6 bag-item-image">
+                    <div class = "bag-item-image">
                         {% if item.product.image %}
                             <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
                         {% else %}
                             <img src = "{{ MEDIA_URL }}noimage.png" alt = "{{ item.product.name }}">
                         {% endif %}
                     </div>
-                    <div class = "col-xs-6 bag-item-info">
+                    <div class = "bag-item-info">
                         <p class = "my-0">{{ item.product.name }}</p>
                         <p class = "text-muted">{{ item.product.sku|upper }}</p>
                         {% if item.product.has_sizes %}
@@ -40,24 +40,24 @@
                             {% endif %}
                         {% endif %} 
                     </div>
-                    <div class = "bag-info-large bag-item-digits">
+                    <div class = "bag-item-digits">
                         {% if item.product.has_subscription %}
                           <p>${{ item.product.price|mul:item.size }}</p>
                         {% else %}
                           <p>${{ item.product.price }}</p>
                         {% endif %}
                     </div>
-                    <div class = "bag-info-large bag-item-digits">
+                    <div class = "bag-item-digits">
                         <p>{{ item.quantity|apnumber|capfirst }}</p>
                     </div>
-                    <div class = "bag-info-large bag-item-digits">
+                    <div class = "bag-item-digits">
                         {% if item.product.has_subscription %}
                             <p>${{ item.product.price|mul:item.quantity|mul:item.size|intcomma }}</p>
                         {% else %}
                             <p>${{ item.product.price|mul:item.quantity|intcomma }}</p>
                         {% endif %}
                     </div>
-                    <div class = "bag-info-large bag-item-digits edit-bag-div">
+                    <div class = "bag-item-digits edit-bag-div">
                         <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
                             {% csrf_token %}
                             <button id = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
@@ -67,53 +67,6 @@
                             {% endif %}
                         </form>
                     </div>
-
-                    <div class = "bag-info-small row">
-                        <div class = "col-4">
-                            <span>Price</span>
-                        </div>
-                        <div class = "col-3">
-                            <span>Qty</span>
-                        </div>
-                        <div class = "col-4">
-                            <span>Subtotal</span>
-                        </div>
-                    </div>
-                    
-
-
-                    <div class = "bag-info-small row">
-                        <div class = "col-4">
-                            {% if item.product.has_subscription %}
-                                <p>${{ item.product.price|mul:item.size }}</p>
-                            {% else %}
-                                <p>${{ item.product.price }}</p>
-                            {% endif %}
-                        </div>
-                        <div class = "col-3">
-                            <p>{{ item.quantity|apnumber|capfirst }}</p>
-                        </div>
-                        <div class = "col-4">
-                            {% if item.product.has_subscription %}
-                                <p>${{ item.product.price|mul:item.quantity|mul:item.size|intcomma }}</p>
-                            {% else %}
-                                <p>${{ item.product.price|mul:item.quantity|intcomma }}</p>
-                            {% endif %}
-                        </div>
-                        <div class = "col-1">
-                        <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
-                            {% csrf_token %}
-                            <button id = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
-                            <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
-                            {% if item.product.has_sizes %}
-                                <input type = "hidden" name = "product_size" value = "{{ item.size }}">
-                            {% endif %}
-                        </form>
-                    </div>
-                    
-
-                    
-
                 </div>
             {% endfor %}
             <div id = "grand-total-div">
