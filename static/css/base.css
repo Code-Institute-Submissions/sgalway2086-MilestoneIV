@@ -65,6 +65,10 @@ header{
     position:absolute;
 }
 
+.grand-total-center{
+    text-align: center;
+}
+
 /* to position mobile navbar */
 #mobile-dropdown-menu{
     position: absolute;
@@ -274,7 +278,7 @@ footer{
     background-color: #248bc6;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 32px 0px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
