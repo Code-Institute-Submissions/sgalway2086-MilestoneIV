@@ -3,69 +3,69 @@
     <div class="navbar-header container">
       <a type="button" class="nav-zindex text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false" aria-controls="navbar" href="#"><i class="fas fa-bars"></i></a>
     </div>
-    <div id="mobile-navbar" class="nav-zindex collapse navbar-collapse">
-      <ul class="nav-zindex nav navbar-nav">
+    <div id="mobile-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
         <li class ="nav-option-mobile">
-          <div class = "nav-zindex container"><a class="navbar-header fw-bold text-black text-decoration-none"  href = "{% url 'home' %}" >Home</a></div>
+          <div class = "container"><a class="navbar-header fw-bold text-black text-decoration-none"  href = "{% url 'home' %}" >Home</a></div>
         </li>
-        <li class ="nav-zindex nav-option-mobile">
-          <div class = "nav-zindex container"><a class="navbar-header fw-bold text-black text-decoration-none"  href = "{% url 'shop' %}" >Shop</a></div>
+        <li class =" nav-option-mobile">
+          <div class = "container"><a class="navbar-header fw-bold text-black text-decoration-none"  href = "{% url 'shop' %}" >Shop</a></div>
         </li>
-        <li class ="nav-zindex nav-option-mobile">
-          <div class = "nav-zindex container"><a class="navbar-header fw-bold text-black text-decoration-none"  href = "{% url 'blog' %}" >Blog</a></div>
+        <li class ="nav-option-mobile">
+          <div class = "container"><a class="navbar-header fw-bold text-black text-decoration-none"  href = "{% url 'blog' %}" >Blog</a></div>
         </li>
         <li>
-        <nav class="nav-zindex navbar text-black">
-          <div class="nav-zindex container">
-            <div class="nav-zindex navbar-header">
-              <a type="button" class="nav-zindex text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#product-mobile-bar" aria-expanded="false" aria-controls="navbar" href="#">Products</a>
+        <nav class="navbar text-black">
+          <div class="container">
+            <div class="navbar-header">
+              <a type="button" class="text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#product-mobile-bar" aria-expanded="false" aria-controls="navbar" href="#">Products</a>
             </div>
-            <div id="product-mobile-bar" class="nav-zindex collapse navbar-collapse">
-              <ul class="nav-zindex nav navbar-nav">
+            <div id="product-mobile-bar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
                 <li>
                   <li>
-                    <nav class="nav-zindex navbar text-black">
-                      <div class="nav-zindex container">
-                        <div class="nav-zindex navbar-header">
+                    <nav class="navbar text-black">
+                      <div class="container">
+                        <div class="nnavbar-header">
                           <a type="button" class="nav-zindex text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#workout-equipment-bar" aria-expanded="false" aria-controls="navbar" href="#">Workout Equipment</a>
                         </div>
-                        <div id="workout-equipment-bar" class="nav-zindex collapse navbar-collapse">
-                          <ul class="nav-zindex nav navbar-nav">
-                            <li class="nav-zindex active"><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=weights">Weights</a></li>
-                            <li><a class="nav-zindex text-black text-decoration-none" href="{% url 'shop' %}?category=bodyweight_fitness">Bodyweight Fitness</a></li>
-                            <li><a class="nav-zindex text-black text-decoration-none" href="{% url 'shop' %}?category=mens_gym_wear">Mens Gym Wear</a></li>
-                            <li><a class="nav-zindex text-black text-decoration-none" href="{% url 'shop' %}?category=womens_gym_wear">Womens Gym Wear</a></li>
+                        <div id="workout-equipment-bar" class="collapse navbar-collapse">
+                          <ul class="nav navbar-nav">
+                            <li class="active"><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=weights">Weights</a></li>
+                            <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=bodyweight_fitness">Bodyweight Fitness</a></li>
+                            <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=mens_gym_wear">Mens Gym Wear</a></li>
+                            <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=womens_gym_wear">Womens Gym Wear</a></li>
                           </ul>
                         </div>
                       </div>
                     </nav>
                   </li>
                   <li>
-                    <nav class="nav-zindex navbar text-black">
-                      <div class="nav-zindex container">
-                        <div class="nav-zindex navbar-header">
-                          <a type="button" class="nav-zindex text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#supplement-bar" aria-expanded="false" aria-controls="navbar" href="#">Supplements</a>
+                    <nav class="navbar text-black">
+                      <div class="container">
+                        <div class="navbar-header">
+                          <a type="button" class="text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#supplement-bar" aria-expanded="false" aria-controls="navbar" href="#">Supplements</a>
                         </div>
-                        <div id="supplement-bar" class="nav-zindex collapse navbar-collapse">
-                          <ul class="nav-zindex nav navbar-nav">
-                            <li class="active"><a class="nav-zindex text-black text-decoration-none" href="{% url 'shop' %}?category=protein_supplements">Protein Supplements</a></li>
-                            <li><a class="nav-zindex text-black text-decoration-none" href="{% url 'shop' %}?category=general_health">General Health</a></li>
-                            <li><a class="nav-zindex text-black text-decoration-none" href="{% url 'shop' %}?category=high_protein_food">High Protein Food</a></li>
+                        <div id="supplement-bar" class="collapse navbar-collapse">
+                          <ul class="nav navbar-nav">
+                            <li class="active"><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=protein_supplements">Protein Supplements</a></li>
+                            <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=general_health">General Health</a></li>
+                            <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=high_protein_food">High Protein Food</a></li>
                           </ul>
                         </div>
                       </div>
                     </nav>
                   </li>
                   <li>
-                    <nav class="nav-zindex navbar text-black">
-                      <div class="nav-zindex container">
-                        <div class="nav-zindex navbar-header">
-                          <a type="button" class="nav-zindex text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#plan-bar" aria-expanded="false" aria-controls="navbar" href="#">Plans</a>
+                    <nav class="navbar text-black">
+                      <div class="container">
+                        <div class=" navbar-header">
+                          <a type="button" class="text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#plan-bar" aria-expanded="false" aria-controls="navbar" href="#">Plans</a>
                         </div>
-                        <div id="plan-bar" class="nav-zindex collapse navbar-collapse">
-                          <ul class="nav-zindex nav navbar-nav">
-                            <li class="active"><a class="nav-zindex text-black text-decoration-none" href="{% url 'shop' %}?category=exercise_plans">Exercise Plans</a></li>
-                            <li><a class="nav-zindex text-black text-decoration-none" href="{% url 'shop' %}?category=nutrition_plans">Nutrition Plans</a></li>
+                        <div id="plan-bar" class="collapse navbar-collapse">
+                          <ul class="nav navbar-nav">
+                            <li class="active"><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=exercise_plans">Exercise Plans</a></li>
+                            <li><a class="text-black text-decoration-none" href="{% url 'shop' %}?category=nutrition_plans">Nutrition Plans</a></li>
                           </ul>
                         </div>
                       </div>
@@ -78,13 +78,13 @@
         </nav>
         </li>
         <li>
-          <nav class="nav-zindex navbar text-black">
-            <div class="nav-zindex container">
-              <div class="nav-zindex navbar-header">
+          <nav class="navbar text-black">
+            <div class="container">
+              <div class="navbar-header">
                 <a type="button" class="nav-zindex text-black fw-bold text-decoration-none navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-account-bar" aria-expanded="false" aria-controls="navbar" href="#">Account</a>
               </div>
               <div id="mobile-account-bar" class="nav-zindex collapse navbar-collapse">
-                <ul class="nav-zindex nav navbar-nav">
+                <ul class="nav navbar-nav">
                   {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                       <li class="active"><a class="nav-zindex text-black text-decoration-none" href="{% url 'add_product' %}">Product Management</a></li>
@@ -100,11 +100,11 @@
             </div>
           </nav>
         </li>
-        <li class = "nav-zindex list-inline-item">
-          <a class = "nav-zindex {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-            <span class = "nav-zindex text-center">
-              <span>Bag</span>
-              <p class = "nav-zindex my-0">
+        <li class = "list-inline-item">
+          <a class = "{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+            <span class = "text-center">
+              <span class = "bag-mobile-nav">Bag</span>
+              <p class = "my-0">
                 {% if grand_total %}
                   €{{ grand_total|floatformat:2 }}
                 {% else %}
