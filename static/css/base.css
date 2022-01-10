@@ -141,7 +141,8 @@ header{
 
 #grand-total-div{
     width: 10%;
-    margin: 0% 10% 0% 80%;
+    margin: 0% 10% 10px 80%;
+
 }
 
 .product-title-card{
