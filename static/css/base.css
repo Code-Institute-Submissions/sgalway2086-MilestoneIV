@@ -305,7 +305,7 @@ footer{
     width: 24em;
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1200px) {
     #header-ul{
         display: inline;
         margin: auto;
@@ -313,7 +313,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1020px) {
     #mobile-header{
         background-color: white;
         height: 40px;
