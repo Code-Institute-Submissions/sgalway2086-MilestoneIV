@@ -21,7 +21,7 @@
                 </div>
             </div>
             {% for item in bag_items %}
-                <div class = "bag-item-wrap">
+                <div class = "bag-info-large bag-item-wrap">
                     <div class = "bag-item-image">
                         {% if item.product.image %}
                             <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
