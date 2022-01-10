@@ -1,7 +1,9 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto', sans-serif;
 }
+
 
 .bag-info-small{
     display: none;

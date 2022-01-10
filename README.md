@@ -22,8 +22,6 @@ subscription and individual payments models
 4. Nutrition Plans
 5. Nutrition and exercise products
 
-
-
 ## Answers to user stories
 
 ### External user
@@ -76,56 +74,74 @@ subscription and individual payments models
 
 ## JSON
 
-![JSON Category Layout](media/JSON_Catagory-layout.png "JSON Category Layout")
+![JSON Category Layout](media/JSON_Catagory_layout.png "JSON Category Layout")
 
 This model is to be the very basis of the project and how it will be laid out within the shop and how the items will be categorised.
 
-## Bug report
+## Design
 
-### HTML
+* Roboto by google fonts was chosen due to its strong, industrial appearence, being suitable to a gym website
 
-1. When using the bootstrap template for the mobile header and after interacting with the 
-products and accounts sub menus within the mobile navbar, this would close the main navbar.
-This was resolved by changing the classes of the navbar and divs containing the nav elements to
-be more similar to that of the enclosed navbars. Changed From an anchor element with a class of 
-"nav-link" to a nav element with a class of "navbar". This allowed the navbar to remain open.
+* Icons from fontawesome will be used to create a more user friendly and aesthetically pleasing appearence
 
-2. The container classes from bootstrap were applied to the third and fourth elements within the mobile navbar, creating an inbalance within the appearence of the navbar thus requiring the addition of a div with the class of container wrapping the first and second li elements. This added the required classes and fixed the imbalance.
+* Colours will be blue and white predominantly, due to being in strong association with fitness and health.
 
-3. The HTML file would be completely unstyled, however this was resolved by adding "{% load static %}" to the base.html to prevent any elements from being unstyled.
+* General styling will lean towards being readable and easy to navigate at all times for the user.
 
-4. When connecting the input within the form to the search query the information entered would not be processed and all products would show despite lack of relevence. The problem turned out to be a mismatch between the name searched for by the python search code and the name attribute on the inputs. This was fixed by matching the two.
 
-5. In the view_product.html, the image is normally meant to lead to a product.image.url, however this link was the same even with the noimage.png loaded in the absence of a product image. A fix to this was removing the anchor element around the noimage.png loader, as it is not necessary and can crash the application.
+## Technologies used
 
-### CSS
+### Gitpod
+* The version control on Gitpod was used to create commits and version control the project and was used as the primary IDE for the project.
 
-1. After creating the mobile header element, the content from the page would collapse below the header and would prevent reading of the top elements. This was resolved by adding a margin of 40px (the height of the mobile header) to the divs and other main body elements of the page on mobile.
+### Github
+* Github was used to store all versions committed from Gitpod and to manage the Gitpod account
 
-2. The products title had padding that when it crossed two lines ended up causing major disruption to the layout. A solution was removing the padding and modifyin the settings in the css file for its height.
+### Heroku
+* Heroku was used to create an app and make the website live, linking to gitpod and allowing the use of automatic deployments when a commit is made from gitpod.
 
-### Javascript
+### Postgres
+* Postgres within Heroku will be used to store the database of the project
 
-1. When creating the sliding image mainscreen, the code to check the current "left" alignment of the divs was originally set to detect when left is -100% before being moved to 200% to set the infinite cycle. A problem that occured in testing was that if the container did not go to -100% precisely, it would cycle left indefinitely. this was resolved by setting the code to check for any elements further left than -100%, preventing moving indefinitely, and allowing the cycle to be continued without error.
-
-### Python
-
+### Amazon web services
+* The amazon web services will be used to store all images related to the project
 
 ### Django
+* Django was used as the basis of the project and its technologies make up the backbone of the entire project. A lot of its other technologies
+* Djangos countries, crispy-forms, allauth, countries, mathfilters and others were used within the framework to create forms, add logins, add a country list and to change the appearence of numbers and dates within the site.
 
-1. When creating the shop model in django, the links were not functioning and the templates were not being reached when there was an attempt to go to the shop template. This was an error in usage of django, requiring the path being added to urls.py.
+### dj-database-url and boto3
+* Both were used in the process of initalising the deployment of the project to heroku and for the use of postgres
 
-2. After mistakenly placing the static folder within the palestra app, it was moved outside into the main project folder after failing to be accessed by other apps and this resolved any errors.
+### gunicorn
+* gunicorn was used to connect the procfile to heroku and ensure the deployment went smoothly
 
-3. When creating the filter function in views.py, an empty "categories" variable could be passed to the page when sorting is not present causing an error to occur. A solution to this was setting "categories = None" at the top of the function to prevent this error.
+### Favicon.cc
+* This site was used to make the favicon for the site
 
-4. During the creation of contexts.py for the bag app, the site would crash when trying to access the bag page. This was due to a variable referenced before assignment. For the sake of simplicity and before the variable can be established elsewhere, it was set to 0 before reference to prevent the site crashing before the grand_total variable can be created elsewhere.
+### Google Chrome Development Tools
+* Used heavily to test site responsiveness across many different screen sizes, and to inspect any possible layout irregularities with its ability to examine code line by line, and add or remove in the environment to see how it displays.
 
-5. When creating the sorting bar for the mobile page, the code would not be read by the if functions as they previously were written {% if 'X' in request.get %}. However this proved to be incorrect and changing to {% if 'X' in request.get_full_path %} allowed it to function as intended.
 
-6. When creating the bag app there was an issue using the default django template calculations. ${% widthratio item.product.price 1 item.quantity %} in the code originally rounded the subtotal, thus reducing accuracy. The solution was installing mathfilters and changing the code to ${{ item.product.price|mul:item.quantity }}, thus removing the rounding error.
+## Features
 
-7. When creating the deletion form on the shopping bag, an error occured when trying to delete items of a certain size. Adding a hidden input that would send the product_value was used to resolve the problem. Originally there was an attempt to try use the dictionary key attribute to get the size which did not work.
+* Very high level of functionality and aesthetics across all platforms
+* A large variety within the site for a user
+* The ability to create an account and log in/out at will
+* Ability for an administrator to edit and delete items on the website
+* A shop and ability to edit the cart before buying
+* A blog, with a full comment system to use
+* A search function to browse the store within the site
+
+## Testing
+
+* The website was tested across a large amount of different screen sizes to ensure functions all work, and the absence of dead links or any poor layouts.
+
+* 4 devices were used to test the project, two windows computers and two android phones and all functions of the website were perfectly operational
+
+* All code was checked to be of high quality and without errors.
+
+* Usage of every theoretical combination of functions in each order was done to ensure the site has a solid experience no matter how it is used by the user and all worked very well
 
 
 ## Deployment
@@ -235,3 +251,63 @@ Download the csv file supplied with access keys
 3. Inside click upload and add files, then select all images
 
 4. Now add the stripe secret keys to heroku
+
+
+## Bug report
+
+### HTML
+
+1. When using the bootstrap template for the mobile header and after interacting with the 
+products and accounts sub menus within the mobile navbar, this would close the main navbar.
+This was resolved by changing the classes of the navbar and divs containing the nav elements to
+be more similar to that of the enclosed navbars. Changed From an anchor element with a class of 
+"nav-link" to a nav element with a class of "navbar". This allowed the navbar to remain open.
+
+2. The container classes from bootstrap were applied to the third and fourth elements within the mobile navbar, creating an inbalance within the appearence of the navbar thus requiring the addition of a div with the class of container wrapping the first and second li elements. This added the required classes and fixed the imbalance.
+
+3. The HTML file would be completely unstyled, however this was resolved by adding "{% load static %}" to the base.html to prevent any elements from being unstyled.
+
+4. When connecting the input within the form to the search query the information entered would not be processed and all products would show despite lack of relevence. The problem turned out to be a mismatch between the name searched for by the python search code and the name attribute on the inputs. This was fixed by matching the two.
+
+5. In the view_product.html, the image is normally meant to lead to a product.image.url, however this link was the same even with the noimage.png loaded in the absence of a product image. A fix to this was removing the anchor element around the noimage.png loader, as it is not necessary and can crash the application.
+
+### CSS
+
+1. After creating the mobile header element, the content from the page would collapse below the header and would prevent reading of the top elements. This was resolved by adding a margin of 40px (the height of the mobile header) to the divs and other main body elements of the page on mobile.
+
+2. The products title had padding that when it crossed two lines ended up causing major disruption to the layout. A solution was removing the padding and modifyin the settings in the css file for its height.
+
+### Javascript
+
+1. When creating the sliding image mainscreen, the code to check the current "left" alignment of the divs was originally set to detect when left is -100% before being moved to 200% to set the infinite cycle. A problem that occured in testing was that if the container did not go to -100% precisely, it would cycle left indefinitely. this was resolved by setting the code to check for any elements further left than -100%, preventing moving indefinitely, and allowing the cycle to be continued without error.
+
+
+### PYTHON/Django
+
+1. When creating the shop model in django, the links were not functioning and the templates were not being reached when there was an attempt to go to the shop template. This was an error in usage of django, requiring the path being added to urls.py.
+
+2. After mistakenly placing the static folder within the palestra app, it was moved outside into the main project folder after failing to be accessed by other apps and this resolved any errors.
+
+3. When creating the filter function in views.py, an empty "categories" variable could be passed to the page when sorting is not present causing an error to occur. A solution to this was setting "categories = None" at the top of the function to prevent this error.
+
+4. During the creation of contexts.py for the bag app, the site would crash when trying to access the bag page. This was due to a variable referenced before assignment. For the sake of simplicity and before the variable can be established elsewhere, it was set to 0 before reference to prevent the site crashing before the grand_total variable can be created elsewhere.
+
+5. When creating the sorting bar for the mobile page, the code would not be read by the if functions as they previously were written {% if 'X' in request.get %}. However this proved to be incorrect and changing to {% if 'X' in request.get_full_path %} allowed it to function as intended.
+
+6. When creating the bag app there was an issue using the default django template calculations. ${% widthratio item.product.price 1 item.quantity %} in the code originally rounded the subtotal, thus reducing accuracy. The solution was installing mathfilters and changing the code to ${{ item.product.price|mul:item.quantity }}, thus removing the rounding error.
+
+7. When creating the deletion form on the shopping bag, an error occured when trying to delete items of a certain size. Adding a hidden input that would send the product_value was used to resolve the problem. Originally there was an attempt to try use the dictionary key attribute to get the size which did not work.
+
+### Existing bugs
+
+1. When using the sort items by selector on the shop, it will only sort by all items on the store, not within a subcategory.
+
+
+## Credits
+
+### content
+* All code written by Stephen Galway
+
+### Acknowlegements
+* My mentor Spencer for providing many valuable insights on improving the website and the various 
+testers who offered advice to make the website more user friendly. Also to the staff at the tutor support who were a fantastic help throughout the project and provided many hours of assistance and helped with many bugs and issues
