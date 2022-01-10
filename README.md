@@ -48,6 +48,38 @@ subscription and individual payments models
 
 5. The other sections of the store dedicated to these types of fitness merchandise are available and featured prominantly
 
+## Wireframes
+
+### Desktop Home
+![Desktop Home](media/wireframes/home-desktop.png "Desktop Home")
+
+### Mobile Home
+![Mobile Home](media/wireframes/home-mobile.png "Mobile Home")
+
+### Blog
+![Blog](media/wireframes/blog.png "Blog")
+
+### Mobile Blog
+![Mobile Blog](media/wireframes/blog-mobile.png "Mobile Blog")
+
+### Product View
+![Product View](media/wireframes/product-view.png "Product View")
+
+### Product View Mobile
+![Product View Mobile](media/wireframes/product-view-mobile.png "Product View Mobile")
+
+### Shop
+![Shop](media/wireframes/shop.png "Shop")
+
+### Shop Mobile
+![Shop Mobile](media/wireframes/shop-mobile.png "Shop Mobile")
+
+## JSON
+
+![JSON Category Layout](media/JSON_Catagory-layout.png "JSON Category Layout")
+
+This model is to be the very basis of the project and how it will be laid out within the shop and how the items will be categorised.
+
 ## Bug report
 
 ### HTML

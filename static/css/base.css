@@ -311,8 +311,8 @@ footer{
 
 #no-item-in-bag{
     text-align:center;
-    margin-top: calc(50%-63px);
-    margin-bottom: calc(50%-63px);
+    margin-top: calc(50vh - 63px);
+    margin-bottom: calc(50vh - 63px);
 }
 
 @media only screen and (max-width: 1200px) {
