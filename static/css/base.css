@@ -357,6 +357,16 @@ footer{
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .bag-info-large{
+        display: none;
+    }
+
+    .bag-info-small{
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 530px) {
     #review-text{
         height: 4em;
