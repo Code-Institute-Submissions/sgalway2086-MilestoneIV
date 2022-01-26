@@ -7,16 +7,16 @@
             {% if bag_items %}
             <div class = "bag-info-large" id = "bag-descriptions">
                 <div class = "bag-desc-info">
-                    <strong><p>Product Info</p></strong>
+                    <p><strong>Product Info</strong></p>
                 </div>
                 <div class = "bag-item-digits">
-                    <strong><p>Price</p></strong>
+                    <p><strong>Price</strong></p>
                 </div>
                 <div class = "bag-item-digits">
-                    <strong><p>Qty</p></strong>
+                    <p><strong>Qty</strong></p>
                 </div>
                 <div class = "bag-item-digits">
-                    <strong><p>Subtotal</p></strong>
+                    <p><strong>Subtotal</strong></p>
                 </div>
             </div>
             {% for item in bag_items %}
@@ -122,7 +122,7 @@
                         <div class = "col-1">
                             <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
                                 {% csrf_token %}
-                                <button id = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
+                                <button class = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
                                 <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
                                 {% if item.product.has_sizes %}
                                     <input type = "hidden" name = "product_size" value = "{{ item.size }}">
@@ -134,15 +134,13 @@
             {% endfor %}
             <div id = "grand-total-div">
                 <div class = "grand-total-center">
-                    <strong><h6>Total: </strong>${{ grand_total|intcomma }}</h6>
-                    <p></p>
+                    <h6><strong>Total: </strong>${{ grand_total|intcomma }}</h6>
                     <a class ="button-general" href = "{% url 'checkout' %}">
                         <p>checkout</p>
                     </a>
                 </div>
             </div>
         </div>    
-    </div>
     {% else %}
     <div id = "no-item-in-bag" class = "min-height-fix">
         <p class = "lead mb-5">Your bag is empty</p>
@@ -154,6 +152,5 @@
         </a>
     </div>
     {% endif %}
-    </div>
 </div>
 {% endblock %}
