@@ -59,7 +59,7 @@
                     <div class = "bag-item-digits edit-bag-div">
                         <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
                             {% csrf_token %}
-                            <button id = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
+                            <button class = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
                             <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
                             {% if item.product.has_sizes %}
                                 <input type = "hidden" name = "product_size" value = "{{ item.size }}">
