@@ -3,8 +3,7 @@
 {% block content %}
 {% load humanize %}
 <div class = "mobile-div-top">
-    <div>
-        <div id = "bag-wrap min-height-fix">
+    <div id = "bag-wrap">
             {% if bag_items %}
             <div class = "bag-info-large" id = "bag-descriptions">
                 <div class = "bag-desc-info">
@@ -147,13 +146,14 @@
     {% else %}
     <div id = "no-item-in-bag" class = "min-height-fix">
         <p class = "lead mb-5">Your bag is empty</p>
-            <a href = "{% url 'shop' %}" class = "btn btn-outline-black rounded-0 btn-lg">
-                <span class = "icon">
-                    <i class ="fas fa-long-arrow-alt-left"></i>
-                </span>
-                <span class = "text-uppercase">Keep Shopping</span>
-            </a>
+        <a href = "{% url 'shop' %}" class = "btn btn-outline-black rounded-0 btn-lg">
+            <span class = "icon">
+                <i class ="fas fa-long-arrow-alt-left"></i>
+            </span>
+            <span class = "text-uppercase">Keep Shopping</span>
+        </a>
     </div>
     {% endif %}
+    </div>
 </div>
 {% endblock %}
