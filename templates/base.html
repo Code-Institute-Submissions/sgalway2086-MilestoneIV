@@ -58,7 +58,7 @@
             <li class = "list-inline-item-dropdown list-inline-item">
               <a class ="nav-link" href = "#" id = "user-options" data-toggle = "dropdown" aria-haspopup = "true" aria-expanded = "false">
                 <span class = "text-center">
-                  <span><i class = "fas fa-user fa-lg"></i></span>
+                  <span class = "display-block"><i class = "fas fa-user fa-lg"></i></span>
                   <span class = "my-0">My Account</span>
                 </span>
               </a>
@@ -78,7 +78,7 @@
             <li class = "list-inline-item">
               <a href = "{% url 'shop' %}"  class = "nav-link text-black">
                 <span class = "text-center">
-                  <span class = "icon"><i class="fas fa-shopping-cart"></i></span>
+                  <span class = "icon display-block"><i class="fas fa-shopping-cart"></i></span>
                   <span class = "my-0">Shop</span>
                 </span>
               </a>
@@ -86,7 +86,7 @@
             <li class = "list-inline-item">
               <a href = "{% url 'blog' %}"  class = "nav-link text-black">
                 <span class = "text-center">
-                  <span class = "icon"><i class="fas fa-users"></i></span>
+                  <span class = "icon display-block"><i class="fas fa-users"></i></span>
                   <span class = "my-0">Blog</span>
                 </span>
               </a>
@@ -94,7 +94,7 @@
             <li class = "list-inline-item">
               <a class = "{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                 <span class = "text-center">
-                  <span><i class = "fas fa-shopping-bag fa-lg"></i></span>
+                  <span class = "display-block"><i class = "fas fa-shopping-bag fa-lg"></i></span>
                   <span class = "my-0">
                     {% if grand_total %}
                       ${{ grand_total|floatformat:2|intcomma }}
