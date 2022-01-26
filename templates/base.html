@@ -62,7 +62,7 @@
                   <span class = "my-0">My Account</span>
                 </span>
               </a>
-              <div class = "dropdown-menu border-0" aria-lavelledby = "user-options">
+              <div class = "dropdown-menu border-0" aria-labelledby = "user-options">
                 {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
                     <a href = "{% url 'add_product' %}" class = "dropdown-item">Product Management
