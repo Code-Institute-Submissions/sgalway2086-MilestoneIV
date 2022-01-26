@@ -160,7 +160,7 @@ header{
     padding: 0px;
 }
 
-#remove-button{
+.remove-button{
 	background: none;
 	color: inherit;
 	border: none;
