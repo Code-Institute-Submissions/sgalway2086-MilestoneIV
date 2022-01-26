@@ -164,12 +164,13 @@
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
-                    <div class =submit-button>
+                    <div class ="submit-button">
                         <a href = "{% url 'view_bag' %}">
                             <p>Adjust bag</p>
                         </a>
                         <button id = "submit-button">Make Order</button>
                         <p>Your card will be charged ${{ grand_total|floatformat:2|intcomma }} + $5 Delivery</p>
+                    </div>
                 </form>
             </div>
         </div>    
