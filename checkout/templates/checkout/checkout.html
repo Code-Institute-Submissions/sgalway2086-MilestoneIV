@@ -27,7 +27,7 @@
             {% for item in bag_items %}
                 <div class = "bag-info-large bag-item-wrap">
                     <div class = "bag-item-image">
-                        <img src = "{{ item.product.image.url }}">
+                        <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
                     </div>
                     <div class = "bag-item-info">
                         <p class = "my-0">{{ item.product.name }}</p>
