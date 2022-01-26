@@ -104,13 +104,13 @@
           <a class = "text-center {% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
             <span class = "text-center">
               <span class = "bag-mobile-nav">Bag</span>
-              <p class = "my-0">
+              <span class = "my-0">
                 {% if grand_total %}
                   €{{ grand_total|floatformat:2 }}
                 {% else %}
                   €0.00
                 {% endif %}
-              </p>
+              </span>
             </span>
           </a>
         </li>
