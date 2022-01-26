@@ -4,151 +4,151 @@
 {% load humanize %}
 <div class = "mobile-div-top">
     <div id = "bag-wrap">
-            {% if bag_items %}
-            <div class = "bag-info-large" id = "bag-descriptions">
-                <div class = "bag-desc-info">
-                    <p><strong>Product Info</strong></p>
+        {% if bag_items %}
+        <div class = "bag-info-large" id = "bag-descriptions">
+            <div class = "bag-desc-info">
+                <p><strong>Product Info</strong></p>
+            </div>
+            <div class = "bag-item-digits">
+                <p><strong>Price</strong></p>
+            </div>
+            <div class = "bag-item-digits">
+                <p><strong>Qty</strong></p>
+            </div>
+            <div class = "bag-item-digits">
+                <p><strong>Subtotal</strong></p>
+            </div>
+        </div>
+        {% for item in bag_items %}
+        <div class = "bag-info-large bag-item-wrap">
+            <div class = "bag-item-image">
+                {% if item.product.image %}
+                <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
+                {% else %}
+                <img src = "{{ MEDIA_URL }}noimage.png" alt = "{{ item.product.name }}">
+                {% endif %}
+            </div>
+            <div class = "bag-item-info">
+                <p class = "my-0">{{ item.product.name }}</p>
+                <p class = "text-muted">{{ item.product.sku|upper }}</p>
+                {% if item.product.has_sizes %}
+                {% if item.product.has_subscription %}
+                <p class = "my-0">{{ item.size }} Month Subscription</p>
+                {% else %}
+                <p class = "my-0">Size: {{ item.size|upper }}</p>
+                {% endif %}
+                {% endif %} 
+            </div>
+            <div class = "bag-item-digits">
+                {% if item.product.has_subscription %}
+                <p>${{ item.product.price|mul:item.size }}</p>
+                {% else %}
+                <p>${{ item.product.price }}</p>
+                {% endif %}
+            </div>
+            <div class = "bag-item-digits">
+                <p>{{ item.quantity|apnumber|capfirst }}</p>
+            </div>
+            <div class = "bag-item-digits">
+                {% if item.product.has_subscription %}
+                <p>${{ item.product.price|mul:item.quantity|mul:item.size|intcomma }}</p>
+                {% else %}
+                <p>${{ item.product.price|mul:item.quantity|intcomma }}</p>
+                {% endif %}
+            </div>
+            <div class = "bag-item-digits edit-bag-div">
+                <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
+                    {% csrf_token %}
+                    <button class = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
+                    <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
+                    {% if item.product.has_sizes %}
+                    <input type = "hidden" name = "product_size" value = "{{ item.size }}">
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+        <div class = "bag-info-small container-fluid">
+            <div class = "row">
+                <div class = "bag-item-image col-6">
+                    {% if item.product.image %}
+                    <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
+                    {% else %}
+                    <img src = "{{ MEDIA_URL }}noimage.png" alt = "{{ item.product.name }}">
+                    {% endif %}
                 </div>
-                <div class = "bag-item-digits">
-                    <p><strong>Price</strong></p>
-                </div>
-                <div class = "bag-item-digits">
-                    <p><strong>Qty</strong></p>
-                </div>
-                <div class = "bag-item-digits">
-                    <p><strong>Subtotal</strong></p>
+                <div class = "col-6">
+                    <p class = "my-0">{{ item.product.name }}</p>
+                    <p class = "text-muted">{{ item.product.sku|upper }}</p>
+                    {% if item.product.has_sizes %}
+                    {% if item.product.has_subscription %}
+                    <p class = "my-0">{{ item.size }} Month Subscription</p>
+                    {% else %}
+                    <p class = "my-0">Size: {{ item.size|upper }}</p>
+                    {% endif %}
+                    {% endif %} 
                 </div>
             </div>
-            {% for item in bag_items %}
-                <div class = "bag-info-large bag-item-wrap">
-                    <div class = "bag-item-image">
-                        {% if item.product.image %}
-                            <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
-                        {% else %}
-                            <img src = "{{ MEDIA_URL }}noimage.png" alt = "{{ item.product.name }}">
-                        {% endif %}
-                    </div>
-                    <div class = "bag-item-info">
-                        <p class = "my-0">{{ item.product.name }}</p>
-                        <p class = "text-muted">{{ item.product.sku|upper }}</p>
+            <div class = "row">
+                <div class = "col-4">
+                    <p>Price</p>
+                </div>
+                <div class = "col-3">
+                    <p>Qty</p>
+                </div>
+                <div class = "col-4">
+                    <p>Total</p>
+                </div>
+                <div class = "col-1">
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-4">
+                    {% if item.product.has_subscription %}
+                    <p>${{ item.product.price|mul:item.size }}</p>
+                    {% else %}
+                    <p>${{ item.product.price }}</p>
+                    {% endif %}
+                </div>
+                <div class = "col-3">
+                    <p>{{ item.quantity|apnumber|capfirst }}</p>
+                </div>
+                <div class = "col-4">
+                    {% if item.product.has_subscription %}
+                    <p>${{ item.product.price|mul:item.quantity|mul:item.size|intcomma }}</p>
+                    {% else %}
+                    <p>${{ item.product.price|mul:item.quantity|intcomma }}</p>
+                    {% endif %}
+                </div>
+                <div class = "col-1">
+                    <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
+                        {% csrf_token %}
+                        <button class = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
+                        <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
                         {% if item.product.has_sizes %}
-                            {% if item.product.has_subscription %}
-                                <p class = "my-0">{{ item.size }} Month Subscription</p>
-                            {% else %}
-                                <p class = "my-0">Size: {{ item.size|upper }}</p>
-                            {% endif %}
-                        {% endif %} 
-                    </div>
-                    <div class = "bag-item-digits">
-                        {% if item.product.has_subscription %}
-                          <p>${{ item.product.price|mul:item.size }}</p>
-                        {% else %}
-                          <p>${{ item.product.price }}</p>
+                        <input type = "hidden" name = "product_size" value = "{{ item.size }}">
                         {% endif %}
-                    </div>
-                    <div class = "bag-item-digits">
-                        <p>{{ item.quantity|apnumber|capfirst }}</p>
-                    </div>
-                    <div class = "bag-item-digits">
-                        {% if item.product.has_subscription %}
-                            <p>${{ item.product.price|mul:item.quantity|mul:item.size|intcomma }}</p>
-                        {% else %}
-                            <p>${{ item.product.price|mul:item.quantity|intcomma }}</p>
-                        {% endif %}
-                    </div>
-                    <div class = "bag-item-digits edit-bag-div">
-                        <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
-                            {% csrf_token %}
-                            <button class = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
-                            <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
-                            {% if item.product.has_sizes %}
-                                <input type = "hidden" name = "product_size" value = "{{ item.size }}">
-                            {% endif %}
-                        </form>
-                    </div>
-                </div>
-                <div class = "bag-info-small container-fluid">
-                    <div class = "row">
-                        <div class = "bag-item-image col-6">
-                            {% if item.product.image %}
-                                <img src = "{{ item.product.image.url }}" alt = "{{ item.product.name }}">
-                            {% else %}
-                                <img src = "{{ MEDIA_URL }}noimage.png" alt = "{{ item.product.name }}">
-                            {% endif %}
-                        </div>
-                        <div class = "col-6">
-                            <p class = "my-0">{{ item.product.name }}</p>
-                            <p class = "text-muted">{{ item.product.sku|upper }}</p>
-                            {% if item.product.has_sizes %}
-                                {% if item.product.has_subscription %}
-                                    <p class = "my-0">{{ item.size }} Month Subscription</p>
-                                {% else %}
-                                    <p class = "my-0">Size: {{ item.size|upper }}</p>
-                                {% endif %}
-                            {% endif %} 
-                        </div>
-                    </div>
-                    <div class = "row">
-                        <div class = "col-4">
-                            <p>Price</p>
-                        </div>
-                        <div class = "col-3">
-                            <p>Qty</p>
-                        </div>
-                        <div class = "col-4">
-                            <p>Total</p>
-                        </div>
-                        <div class = "col-1">
-                        </div>
-                    </div>
-                    <div class = "row">
-                        <div class = "col-4">
-                            {% if item.product.has_subscription %}
-                            <p>${{ item.product.price|mul:item.size }}</p>
-                            {% else %}
-                            <p>${{ item.product.price }}</p>
-                            {% endif %}
-                        </div>
-                        <div class = "col-3">
-                            <p>{{ item.quantity|apnumber|capfirst }}</p>
-                        </div>
-                        <div class = "col-4">
-                            {% if item.product.has_subscription %}
-                            <p>${{ item.product.price|mul:item.quantity|mul:item.size|intcomma }}</p>
-                            {% else %}
-                            <p>${{ item.product.price|mul:item.quantity|intcomma }}</p>
-                            {% endif %}
-                        </div>
-                        <div class = "col-1">
-                            <form class = "form" action="{% url 'remove_from_bag' item.product.id %}" method = "POST">
-                                {% csrf_token %}
-                                <button class = "remove-button" type = "submit"><i class="fas fa-times"></i></button>
-                                <input type = "hidden" name = "redirect_url" value = "{{ request.path }}">
-                                {% if item.product.has_sizes %}
-                                    <input type = "hidden" name = "product_size" value = "{{ item.size }}">
-                                {% endif %}
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-            <div id = "grand-total-div">
-                <div class = "grand-total-center">
-                    <h6><strong>Total: </strong>${{ grand_total|intcomma }}</h6>
-                    <a class ="button-general" href = "{% url 'checkout' %}">
-                        <p>checkout</p>
-                    </a>
+                    </form>
                 </div>
             </div>
-        </div>    
+        </div>
+        {% endfor %}
+        <div id = "grand-total-div">
+            <div class = "grand-total-center">
+                <h6><strong>Total: </strong>${{ grand_total|intcomma }}</h6>
+                <a class ="button-general" href = "{% url 'checkout' %}">
+                    <p>checkout</p>
+                </a>
+            </div>
+        </div>
+    </div>
     {% else %}
     <div id = "no-item-in-bag" class = "min-height-fix">
         <p class = "lead mb-5">Your bag is empty</p>
         <a href = "{% url 'shop' %}" class = "btn btn-outline-black rounded-0 btn-lg">
-            <span class = "icon">
-                <i class ="fas fa-long-arrow-alt-left"></i>
-            </span>
-            <span class = "text-uppercase">Keep Shopping</span>
+        <span class = "icon">
+        <i class ="fas fa-long-arrow-alt-left"></i>
+        </span>
+        <span class = "text-uppercase">Keep Shopping</span>
         </a>
     </div>
     {% endif %}
