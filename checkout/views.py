@@ -34,6 +34,7 @@ def cache_checkout_data(request):
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
+
 def checkout(request):
     '''
     Open the checkout page
@@ -82,7 +83,8 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your bag wasn't \
+                        found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -96,7 +98,7 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "Your bag is empty at the moment")
             return redirect(reverse('shop'))
 
         current_bag = bag_contents(request)
