@@ -3,6 +3,7 @@
 ## User Stories
 
 ### External user’s goal:
+
 1. To join a fitness community and purchase exercise plans and
 merchandise
 
@@ -134,6 +135,22 @@ This model is to be the very basis of the project and how it will be laid out wi
 * A search function to browse the store within the site
 
 ## Testing
+
+### Validation
+
+* The site underwent validation in a number of steps in order to ensure that the HTML was error free and highly functional. Each page followed a number of steps outlined below as to how they were validated.
+
+1. The first step was to place the link into the W3C validator, and seeing what errors are present. After clearing these. These errors can then be cleared and then the next step commenced.
+
+2. The next part of the html validation was to go into google chromes developer tools, and click source. After opening the code running behind the page, it was then copy and pasted into the html validators raw input mode. This ensures that the html is being validated, even accounting for any possible variance.
+
+3. The third step is an extension on the second. On a page like the the bag, or blog for example where the content can vary, using the dev tools source code and checking multiple combinations of variations on each page was very useful. The bag page for instance was tested with multiple different quantities of items, different sizes, and with many different varieties of bag contents to ensure the html was secure and error free.
+
+4. After the validation of the HTML was finished, the CSS was ran through the W3C CSS validator and ran without issue.
+
+5. The views.py contents in each django app were ran through the validator on pep8online.com to ensure that the python code was pep8 compliant and well structed.
+
+### Usage Testing
 
 * The website was tested across a large amount of different screen sizes to ensure functions all work, and the absence of dead links or any poor layouts.
 
