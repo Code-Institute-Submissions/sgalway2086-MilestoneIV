@@ -15,9 +15,9 @@
         <form method="POST" action="{% url 'add_post' %}" enctype="multipart/form-data">
             {% csrf_token %}
             <span>Post Title</span><br>
-            <input type="text" id="post_title" name="post_title"><br>
+            <input type="text" id="post_title" name="post_title" required><br>
             <span>Post Text</span><br>
-            <textarea id = "add-post-text" name="body_text"></textarea>
+            <textarea id = "add-post-text" name="body_text" required></textarea>
             <div class="text-right">
                 <button class="btn btn-black rounded-0" type="submit">Add Post</button>
             </div>

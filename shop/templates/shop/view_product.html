@@ -123,11 +123,11 @@
           <form method="POST" action="{% url 'add_text_review' product.id %}" enctype="multipart/form-data">
             {% csrf_token %}
             <span>Review Title</span><br>
-            <input type="text" id="title" name="title"><br>
+            <input type="text" id="title" name="title" required><br>
             <span>Number Rating</span><br>
             <input value="3" min="1" max="5" type="number" name="rating"><br>
             <span>Review Text</span><br>
-            <textarea id = "review-text" name="r_text"></textarea>
+            <textarea id = "review-text" name="r_text" required></textarea>
             <div class="text-right">
                 <button class="btn btn-black rounded-0" type="submit">Add Review</button>
             </div>

@@ -28,7 +28,7 @@
         <form method="POST" action="{% url 'add_comment' post.id %}" enctype="multipart/form-data">
             {% csrf_token %}
             <span>Leave a Comment</span><br>
-            <textarea id = "leave-comment-text" name="comment_text"></textarea>
+            <textarea id = "leave-comment-text" name="comment_text" required></textarea>
             <div class="text-right">
                 <button class="btn btn-black rounded-0" type="submit">Send</button>
                 <input type = "hidden" value = "{{ post.id }}">
