@@ -5,6 +5,9 @@ from django.contrib import messages
 
 
 def blog(request):
+    '''
+    Open the blog page
+    '''
     posts = Posts.objects.all()
     context = {
         'posts': posts,
@@ -13,6 +16,9 @@ def blog(request):
 
 
 def add_post(request):
+    '''
+    Add a post to the site if logged in
+    '''
     if request.method == 'POST':
         if request.user.is_authenticated:
             post = Posts()
@@ -27,6 +33,9 @@ def add_post(request):
 
 
 def view_post(request, post_id):
+    '''
+    Open a post saved on the site
+    '''
     post = get_object_or_404(Posts, pk=post_id)
     comments = Comment.objects.all()
     context = {
@@ -37,6 +46,9 @@ def view_post(request, post_id):
 
 
 def add_comment(request, post_id):
+    '''
+    Add comment to blog post, using the posts id to specify where the comment belongs
+    '''
     if request.method == 'POST':
         post = get_object_or_404(Posts, pk=post_id)
         comments = Comment.objects.all()

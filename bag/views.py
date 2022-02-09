@@ -3,10 +3,16 @@ from django.conf import settings
 
 
 def view_bag(request):
+    '''
+    View bag items
+    '''
     return render(request, 'bag/shopping-bag.html')
 
 
 def add_to_bag(request, item_id):
+    '''
+    Add items to the bag
+    '''
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
@@ -32,6 +38,9 @@ def add_to_bag(request, item_id):
 
 
 def remove_from_bag(request, item_id):
+    '''
+    Remove an element from the bag
+    '''
     size = None
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})

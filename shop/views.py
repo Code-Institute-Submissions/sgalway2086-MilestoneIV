@@ -7,7 +7,9 @@ from .forms import ProductForm
 
 
 def shop(request):
-
+    '''
+    Open the shop page and load products
+    '''
     products = Product.objects.all()
     query = None
     category = None
@@ -56,6 +58,9 @@ def shop(request):
     return render(request, 'shop/shop.html', context)
 
 def view_product(request, product_id):
+    '''
+    View specific product using product id for access
+    '''
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.all()
 
@@ -68,6 +73,9 @@ def view_product(request, product_id):
 
 @login_required
 def add_product(request):
+    '''
+    Add a product to the site if superuser
+    '''
     if not request.user.is_superuser:
         return redirect(reverse('home'))
     if request.method == 'POST':
@@ -90,6 +98,9 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
+    '''
+    Edit a product if accessed by superuser
+    '''
     if not request.user.is_superuser:
         return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
@@ -115,6 +126,9 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
+    '''
+    Delete product if superuser
+    '''
     if not request.user.is_superuser:
         return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
@@ -124,6 +138,9 @@ def delete_product(request, product_id):
 
 
 def add_review(request, product_id):
+    '''
+    Add a rating to a specific product
+    '''
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         review_count = product.review_quantity
@@ -144,6 +161,9 @@ def add_review(request, product_id):
 
 
 def add_text_review(request, product_id):
+    '''
+    Add a text review to a specific item
+    '''
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         if request.user.is_authenticated:

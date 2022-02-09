@@ -8,6 +8,9 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def profile(request):
+    '''
+    Access profile and past order information
+    '''
     profile = get_object_or_404(UserProfile, user=request.user)
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -31,6 +34,9 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    '''
+    Access previously made order
+    '''
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
