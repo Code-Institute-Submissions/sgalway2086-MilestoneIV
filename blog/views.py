@@ -57,6 +57,12 @@ def add_comment(request, post_id):
             }
             return render(request, 'blog/view_post.html', context)
         else:
+            post = get_object_or_404(Posts, pk=post_id)
+            comments = Comment.objects.all()
+            context = {
+                'post': post,
+                'comments': comments,
+            }
             messages.error(request, 'Can not comment. Please log in')
         return render(request, 'blog/view_post.html', context)
     return render(request, 'blog/view_post.html', context)
