@@ -74,10 +74,24 @@ subscription and individual payments models
 ![Shop Mobile](media/wireframes/shop-mobile.png "Shop Mobile")
 
 ## JSON
-
 ![JSON Category Layout](media/JSON_Catagory_layout.png "JSON Category Layout")
 
 This model is to be the very basis of the project and how it will be laid out within the shop and how the items will be categorised.
+
+## Database Layout
+### Blog Database
+![Database Blog Layout](media/databaseinformation/databaseblog.PNG "Database Blog Layout")
+
+### Checkout Database
+![Database Checkout Layout](media/databaseinformation/databasecheckout.png "Database Checkout Layout")
+
+### Profile Database
+![Database Profile Layout](media/databaseinformation/databaseprofiles.PNG "Database Profile Layout")
+
+### Shop Database
+![Database Shop Layout](media/databaseinformation/databaseshop.png "Database Shop Layout")
+
+
 
 ## Design
 
