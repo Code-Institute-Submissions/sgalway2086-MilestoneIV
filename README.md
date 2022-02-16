@@ -119,7 +119,7 @@ subscription and individual payments models
 ![Order Confirmation](media/wireframes/order-confirmation.png "Order Confirmation")
 
 ### Order Confirmation Mobile
-![Order Confirmation Mobile](media/wireframes/order-confirmation.png "Order Confirmation Mobile")
+![Order Confirmation Mobile](media/wireframes/order-confirmation-mobile.png "Order Confirmation Mobile")
 
 ## JSON
 ![JSON Category Layout](media/JSON_Catagory_layout.png "JSON Category Layout")

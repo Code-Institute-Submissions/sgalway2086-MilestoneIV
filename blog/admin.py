@@ -11,6 +11,7 @@ class BlogAdmin(admin.ModelAdmin):
         'body_text',
     )
 
+
 class CommentAdmin(admin.ModelAdmin):
     list_display = (
         'user',

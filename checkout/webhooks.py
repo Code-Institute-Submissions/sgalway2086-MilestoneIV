@@ -11,6 +11,9 @@ import stripe
 @require_POST
 @csrf_exempt
 def webhook(request):
+    '''
+    Send webhook to stripe
+    '''
     wh_secret = settings.STRIPE_WH_SECRET
     stripe.api_key = settings.STRIPE_SECRET_KEY
     payload = request.body

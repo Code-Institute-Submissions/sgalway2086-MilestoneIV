@@ -9,10 +9,13 @@ from profiles.models import UserProfile
 import json
 import time
 
+
 class StripeWH_Handler:
+    '''
+    Class to send webhooks to stripe
+    '''
     def __init__(self, request):
         self.request = request
-
 
     def _send_confirmation_email(self, order):
         cust_email = order.email
@@ -49,7 +52,7 @@ class StripeWH_Handler:
         print(grand_total)
         print(bag)
         print(pid)
-        
+
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
@@ -83,7 +86,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} | SUCCESS: \
+                    Verified order already in database',
                 status=200)
         else:
             order = None
@@ -128,7 +132,8 @@ class StripeWH_Handler:
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=f'Webhook received: {event["type"]} | SUCCESS: Created \
+                order in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):
