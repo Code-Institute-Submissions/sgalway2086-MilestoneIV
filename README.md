@@ -55,6 +55,12 @@ subscription and individual payments models
 ### Mobile Home
 ![Mobile Home](media/wireframes/home-mobile.png "Mobile Home")
 
+### Login
+![Login](media/wireframes/login.png "Login")
+
+### Mobile Login
+![Mobile Login](media/wireframes/login-mobile.png "Mobile Login")
+
 ### Blog
 ![Blog](media/wireframes/blog.png "Blog")
 
@@ -67,17 +73,17 @@ subscription and individual payments models
 ### Mobile Blog Specific Post
 ![Mobile Blog Post](media/wireframes/blog-post-mobile.png "Mobile Blog Post")
 
-### Product View
-![Product View](media/wireframes/product-view.png "Product View")
-
-### Product View Mobile
-![Product View Mobile](media/wireframes/product-view-mobile.png "Product View Mobile")
-
 ### Shop
 ![Shop](media/wireframes/shop.png "Shop")
 
 ### Shop Mobile
 ![Shop Mobile](media/wireframes/shop-mobile.png "Shop Mobile")
+
+### Product View
+![Product View](media/wireframes/product-view.png "Product View")
+
+### Product View Mobile
+![Product View Mobile](media/wireframes/product-view-mobile.png "Product View Mobile")
 
 ## JSON
 ![JSON Category Layout](media/JSON_Catagory_layout.png "JSON Category Layout")
