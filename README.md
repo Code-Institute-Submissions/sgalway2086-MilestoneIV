@@ -115,6 +115,12 @@ subscription and individual payments models
 ### Checkout Mobile
 ![Checkout Mobile](media/wireframes/checkout-mobile.png "Checkout Mobile")
 
+### Order Confirmation
+![Order Confirmation](media/wireframes/order-confirmation.png "Order Confirmation")
+
+### Order Confirmation Mobile
+![Order Confirmation Mobile](media/wireframes/order-confirmation.png "Order Confirmation Mobile")
+
 ## JSON
 ![JSON Category Layout](media/JSON_Catagory_layout.png "JSON Category Layout")
 
