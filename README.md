@@ -61,6 +61,12 @@ subscription and individual payments models
 ### Mobile Blog
 ![Mobile Blog](media/wireframes/blog-mobile.png "Mobile Blog")
 
+### Blog Specific Post
+![Blog Post](media/wireframes/blog-post.png "Blog Post")
+
+### Mobile Blog Specific Post
+![Mobile Blog Post](media/wireframes/blog-post-mobile.png "Mobile Blog Post")
+
 ### Product View
 ![Product View](media/wireframes/product-view.png "Product View")
 
@@ -90,7 +96,6 @@ This model is to be the very basis of the project and how it will be laid out wi
 
 ### Shop Database
 ![Database Shop Layout](media/databaseinformation/databaseshop.png "Database Shop Layout")
-
 
 
 ## Design
