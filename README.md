@@ -61,6 +61,13 @@ subscription and individual payments models
 ### Mobile Login
 ![Mobile Login](media/wireframes/login-mobile.png "Mobile Login")
 
+### Signup
+![Login](media/wireframes/signup.png "Login")
+
+### Signup Login
+![Mobile Signup](media/wireframes/signup-mobile.png "Mobile Signup")
+
+
 ### Blog
 ![Blog](media/wireframes/blog.png "Blog")
 
