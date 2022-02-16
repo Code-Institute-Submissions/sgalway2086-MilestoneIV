@@ -138,7 +138,7 @@ This model is to be the very basis of the project and how it will be laid out wi
 
 ### Validation
 
-* The site underwent validation in a number of steps in order to ensure that the HTML was error free and highly functional. Each page followed a number of steps outlined below as to how they were validated.
+The site underwent validation in a number of steps in order to ensure that the HTML was error free and highly functional. Each page followed a number of steps outlined below as to how they were validated.
 
 1. The first step was to place the link into the W3C validator, and seeing what errors are present. After clearing these. These errors can then be cleared and then the next step commenced.
 
