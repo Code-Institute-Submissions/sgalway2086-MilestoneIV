@@ -64,9 +64,14 @@ subscription and individual payments models
 ### Signup
 ![Login](media/wireframes/signup.png "Login")
 
-### Signup Login
+### Signup Mobile
 ![Mobile Signup](media/wireframes/signup-mobile.png "Mobile Signup")
 
+### Profile
+![Profile](media/wireframes/profile.png "Profile")
+
+### Mobile Profile 
+![Mobile Profile](media/wireframes/profile-mobile.png "Mobile Profile")
 
 ### Blog
 ![Blog](media/wireframes/blog.png "Blog")
@@ -91,6 +96,24 @@ subscription and individual payments models
 
 ### Product View Mobile
 ![Product View Mobile](media/wireframes/product-view-mobile.png "Product View Mobile")
+
+### Empty Bag
+![Empty Bag](media/wireframes/empty-bag.png "Empty Bag")
+
+### Empty Bag Mobile
+![Empty Bag Mobile](media/wireframes/empty-bag-mobile.png "Empty Bag Mobile")
+
+### Bag
+![Bag](media/wireframes/bag.png "Bag")
+
+### Bag Mobile
+![Bag Mobile](media/wireframes/bag-mobile.png "Bag Mobile")
+
+### Checkout
+![Checkout](media/wireframes/checkout.png "Checkout")
+
+### Checkout Mobile
+![Checkout Mobile](media/wireframes/checkout-mobile.png "Checkout Mobile")
 
 ## JSON
 ![JSON Category Layout](media/JSON_Catagory_layout.png "JSON Category Layout")
