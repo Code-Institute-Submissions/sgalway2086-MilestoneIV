@@ -1,4 +1,4 @@
-window.onload =function setSlideImage(){
+window.onload = function setSlideImage() {
     document.getElementById("box1").style.left = 0 + "%";
     document.getElementById("box2").style.left = 100 + "%";
     document.getElementById("box3").style.left = 200 + "%";
@@ -10,7 +10,7 @@ window.onload =function setSlideImage(){
 
 
 /* Set positions of box divs before the scroll function is called */
-function imageScroll(imageScrollSpeed){
+function imageScroll(imageScrollSpeed) {
     var scrollTimer = 0;
     var pause = 0;
     pause = pause + 1000;
@@ -25,8 +25,8 @@ function imageScroll(imageScrollSpeed){
         }
       },scrollTimer);
     }
-    setTimeout(function(){
-      for(let i = 0; i < 3; i++){
+    setTimeout(function() {
+      for(let i = 0; i < 3; i++) {
         let leftStyleChecker = document.getElementsByClassName("scrollBox")[i].style.left;
         leftStyleChecker = leftStyleChecker.replace("%", "");
         if(leftStyleChecker <= -100){
@@ -34,16 +34,12 @@ function imageScroll(imageScrollSpeed){
         }
       }
     },pause);
-  setTimeout(function(){
+  setTimeout(function() {
     imageScroll();
-  },5000);
+  }, 5000);
 }
   
   /* times and creates the scrolling effect of the 3 divs on the main page */
-
-function hello(){
-  console.log('hello');
-}
 
 function quantityPlusOne(element) {
   let productCounter = element.previousElementSibling;
