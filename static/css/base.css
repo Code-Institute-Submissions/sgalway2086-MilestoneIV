@@ -302,6 +302,17 @@ footer{
     font-size: 16px;
 }
 
+.button-small{
+    background-color: #248bc6;
+    border: none;
+    color: white;
+    padding: 3px 32px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 .min-height-fix{
     min-height: calc(100% - 130px);
 }

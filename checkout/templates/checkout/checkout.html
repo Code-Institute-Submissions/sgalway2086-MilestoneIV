@@ -168,7 +168,7 @@
                         <a href = "{% url 'view_bag' %}">
                             <p>Adjust bag</p>
                         </a>
-                        <button id = "submit-button">Make Order</button>
+                        <button class = "button-general" id = "submit-button">Make Order</button>
                         <p>Your card will be charged ${{ grand_total|floatformat:2|intcomma }} + $5 Delivery</p>
                     </div>
                 </form>
