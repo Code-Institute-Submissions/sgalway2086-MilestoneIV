@@ -195,6 +195,10 @@ This model is to be the very basis of the project and how it will be laid out wi
 * A blog, with a full comment system to use
 * A search function to browse the store within the site
 
+
+
+
+
 ## Testing
 
 ### Validation
@@ -210,6 +214,59 @@ The site underwent validation in a number of steps in order to ensure that the H
 4. After the validation of the HTML was finished, the CSS was ran through the W3C CSS validator and ran without issue.
 
 5. The views.py contents in each django app were ran through the validator on pep8online.com to ensure that the python code was pep8 compliant and well structed.
+
+### HTML Validation
+
+#### Home Page Validation
+![Home Validation](media/validation/validationhome.PNG "Home Validation")
+
+#### Login Validation
+![Login Validation](media/validation/validationlogin.PNG "Login Validation")
+
+#### Signup Validation
+![Signup Validation](media/validation/validationsignup.PNG "Signup Validation")
+
+#### Profile Validation
+![Profile Validation](media/validation/validationprofile.PNG "Profile Validation")
+
+#### Shop Validation
+![Shop Validation](media/validation/validationshop.PNG "Shop Validation")
+
+#### Product View Validation
+![Product View Validation](media/validation/validationproductview.PNG "Product View Validation")
+
+#### Bag Validation
+![Bag Validation](media/validation/validationbag.PNG "Bag Validation")
+
+#### Checkout Validation
+![Checkout Validation](media/validation/validationcheckout.PNG "Checkout Validation")
+
+#### Order Confirmation Validation
+![Order Confirmation Validation](media/validation/validationorderconfirmation.PNG "Order Confirmation Validation")
+
+#### Blog Validation
+![Blog Validation](media/validation/validationblog.PNG "Blog Validation")
+
+#### Blog Post Validation
+![Blog Post Validation](media/validation/validationblogpost.PNG "Blog Post Validation")
+
+#### Product Management Validation
+![Product Management Validation](media/validation/validationproductmanagement.PNG "Product Management Validation")
+
+#### Product Edit Validation
+![Product Edit Validation](media/validation/validationproductedit.PNG "Product Edit Validation")
+
+### CSS Validation
+
+#### Main CSS Validation
+![Main CSS Validation](media/validation/validationcss.PNG "Main CSS Validation")
+
+#### Checkout CSS Validation
+![Checkout CSS Validation](media/validation/validationcheckoutcss.PNG "Checkout CSS Validation")
+
+#### Profile CSS Validation
+![Profile CSS Validation](media/validation/validationprofilecss.PNG "Profile CSS Validation")
+
 
 ### Usage Testing
 
