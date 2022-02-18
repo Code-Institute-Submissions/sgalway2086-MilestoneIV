@@ -204,8 +204,8 @@ header{
     width: 320px;
     display: inline-block;
     margin: 0 auto;
-    margin-top: calc(50vh - 160px); 
-    margin-bottom: calc(50vh - 160px);
+    margin-top: calc(50vh - 80px); 
+    margin-bottom: calc(50vh - 80px);
 }
 
 #id_email, #id_email2, #id_username, #id_password1, #id_password2 {
@@ -276,7 +276,9 @@ footer{
     width: 100%;
 }
 
-
+.page-height-fix{
+    min-height: calc(100vh - 80px);
+}
 
 .button-home{
     background-color: #248bc6;

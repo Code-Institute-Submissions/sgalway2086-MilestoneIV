@@ -1,51 +1,32 @@
 # Milestone 4
 
+This site (Palestra Fitness) is to be a fitness themed site that offers products for sale, and places for people to connect over the common interest of fitness.
+
 ## User Stories
 
 ### External user’s goal:
 
-1. To join a fitness community and purchase exercise plans and
-merchandise
+1. As an external user, I want to be able to purchase products, and post on the site so that I can become part of a fitness community.
 
-2. Easy access to a wide range of fitness related merchandise and goods
+2. As an external user, I want easy access to a wide range of fitness related merchandise and goods so that they can be utilised.
 
-3. Strong features with a draw to keep coming back go
+3. As an external user, I want strong features with a draw to keep coming back to, so that the site will be a more welcoming and engaging site on which to be on.
 
-4. The ability to buy subscriptions in the store
+4. As an external user, I want the ability to buy subscriptions in the store so that I can get a consistant use of a product that I enjoy.
 
 
 ### Site owner's goal:
 
-1. Build an active community around the product based on
-subscription and individual payments models
-2. Sell
-3. Exercise plans
-4. Nutrition Plans
-5. Nutrition and exercise products
+1. As a site owner, I want to build an active community around the product based on
+subscription and individual payments models so that people continue returning to the site.
 
-## Answers to user stories
+2. As a site owner, I want to sell products so that the site can begin to make profit.
 
-### External user
+3. As a site owner, I want to sell exercise plans so that the sites users can access specialised fitness content.
 
-1. Joining a community was made very possibile by the ability to join forums, comment and post
+4. As a site owner, I want to sell nutrition plans so that the users of the site can supplement their exercise plans.
 
-2. The shop is the most prominant part of the site arguably and very accessable to all users 
-
-3. Very strong features that make coming back to the site, for any number of different uses very tempting to a user and creates a good sense of variety
-
-4. Subscriptions and their skus are listed on the store where the user can find them very easily.
-
-### Site owner
-
-1. The community is able to be very active and discuss products readily in the forums
-
-2. The shop makes selling a wide range of products very simple
-
-3. The store has an entire section dedicated to exercise plans meaning they cant be missed. And with a prominant advertisement on the homepage
-
-4. As with the exercise plans, the nutrition plans have their own section and are very much able to be accessed with ease
-
-5. The other sections of the store dedicated to these types of fitness merchandise are available and featured prominantly
+5. As a site owner, I want to sell nutrition and exercise products so that the site is able to draw a profit and cultivate returning users.
 
 ## Wireframes
 
@@ -121,10 +102,6 @@ subscription and individual payments models
 ### Order Confirmation Mobile
 ![Order Confirmation Mobile](media/wireframes/order-confirmation-mobile.png "Order Confirmation Mobile")
 
-## JSON
-![JSON Category Layout](media/JSON_Catagory_layout.png "JSON Category Layout")
-
-This model is to be the very basis of the project and how it will be laid out within the shop and how the items will be categorised.
 
 ## Database Layout
 ### Blog Database
@@ -138,6 +115,9 @@ This model is to be the very basis of the project and how it will be laid out wi
 
 ### Shop Database
 ![Database Shop Layout](media/databaseinformation/databaseshop.png "Database Shop Layout")
+
+### JSON Product Categories
+![JSON Category Layout](media/JSON_Catagory_layout.png "JSON Category Layout")
 
 
 ## Design
@@ -157,63 +137,82 @@ This model is to be the very basis of the project and how it will be laid out wi
 * The version control on Gitpod was used to create commits and version control the project and was used as the primary IDE for the project.
 
 ### Github
-* Github was used to store all versions committed from Gitpod and to manage the Gitpod account
+* Github was used to store all versions committed from Gitpod and to manage the Gitpod account.
 
 ### Heroku
 * Heroku was used to create an app and make the website live, linking to gitpod and allowing the use of automatic deployments when a commit is made from gitpod.
 
 ### Postgres
-* Postgres within Heroku will be used to store the database of the project
+* Postgres within Heroku will be used to store the database of the project, and all of its information.
 
 ### Amazon web services
-* The amazon web services will be used to store all images related to the project
+* The amazon web services will be used to store all images related to the project. It is accessable by superusers to add and delete images.
 
 ### Django
 * Django was used as the basis of the project and its technologies make up the backbone of the entire project. A lot of its other technologies
 * Djangos countries, crispy-forms, allauth, countries, mathfilters and others were used within the framework to create forms, add logins, add a country list and to change the appearence of numbers and dates within the site.
 
 ### dj-database-url and boto3
-* Both were used in the process of initalising the deployment of the project to heroku and for the use of postgres
+* Both were used in the process of initalising the deployment of the project to heroku and for the use of postgres.
 
 ### gunicorn
-* gunicorn was used to connect the procfile to heroku and ensure the deployment went smoothly
+* gunicorn was used to connect the procfile to heroku and ensure the deployment went smoothly.
 
 ### Favicon.cc
-* This site was used to make the favicon for the site
+* This site was used to make the favicon for the site.
 
 ### Google Chrome Development Tools
 * Used heavily to test site responsiveness across many different screen sizes, and to inspect any possible layout irregularities with its ability to examine code line by line, and add or remove in the environment to see how it displays.
 
-
 ## Features
 
-* Very high level of functionality and aesthetics across all platforms
-* A large variety within the site for a user
-* The ability to create an account and log in/out at will
-* Ability for an administrator to edit and delete items on the website
-* A shop and ability to edit the cart before buying
-* A blog, with a full comment system to use
-* A search function to browse the store within the site
-
-
-
-
+* Very high level of functionality and aesthetics across all platforms.
+* A large variety within the site for a user.
+* The ability to create an account and log in/out at will.
+* Ability for an administrator to edit and delete items on the website.
+* A shop and ability to edit the cart before buying.
+* A blog, with a full comment system to use.
+* A search function to browse the store within the site.
 
 ## Testing
+
+### User Story Testing
+
+#### External user
+
+1. Joining a community was made very possibile by the ability to join forums, comment and post.
+
+2. The shop is the most prominant part of the site arguably and very accessable to all users.
+
+3. Very strong features that make coming back to the site, for any number of different uses very tempting to a user and creates a good sense of variety.
+
+4. Subscriptions and their skus are listed on the store where the user can find them very easily.
+
+#### Site owner
+
+1. The community is able to be very active and discuss products readily in the forums.
+
+2. The shop makes selling a wide range of products very simple.
+
+3. The store has an entire section dedicated to exercise plans meaning they cant be missed. And with a prominant advertisement on the homepage.
+
+4. As with the exercise plans, the nutrition plans have their own section and are very much able to be accessed with ease.
+
+5. The other sections of the store dedicated to these types of fitness merchandise are available and featured prominantly.
 
 ### Validation
 
 The site underwent validation in a number of steps in order to ensure that the HTML was error free and highly functional. Each page followed a number of steps outlined below as to how they were validated.
 
-1. The first step was to place the link into the W3C validator, and seeing what errors are present. After clearing these. These errors can then be cleared and then the next step commenced.
+1. The first step was to place the link into the W3C validator, and seeing what errors are present. After clearing these, the errors were then cleared and then the next step was commenced.
 
 2. The next part of the html validation was to go into google chromes developer tools, and click source. After opening the code running behind the page, it was then copy and pasted into the html validators raw input mode. This ensures that the html is being validated, even accounting for any possible variance.
 
-3. The third step is an extension on the second. On a page like the the bag, or blog for example where the content can vary, using the dev tools source code and checking multiple combinations of variations on each page was very useful. The bag page for instance was tested with multiple different quantities of items, different sizes, and with many different varieties of bag contents to ensure the html was secure and error free.
+3. The third step is an extension on the second. On a page, for example, the bag or blog for example where the content can vary, using the dev tools source code and checking multiple combinations of variations on each page was very useful. The bag page for instance was tested with multiple different quantities of items, different sizes, and with many different varieties of bag contents to ensure the html was secure and error free.
 
 4. After the validation of the HTML was finished, the CSS was ran through the W3C CSS validator and ran without issue.
 
-5. The views.py contents in each django app were ran through the validator on pep8online.com to ensure that the python code was pep8 compliant and well structed.
+5. The views.py contents in each django app were ran through the validator on pep8online.com to ensure that the python code was pep8 compliant and well structed. This was in combination with a linter to ensure the content was as of high quality as possible.
 
 ### HTML Validation
 
@@ -241,6 +240,8 @@ The site underwent validation in a number of steps in order to ensure that the H
 #### Checkout Validation
 ![Checkout Validation](media/validation/validationcheckout.PNG "Checkout Validation")
 
+For the checkout validation, it was necessary to leave this h1 element empty due to its use as a loading spinner.
+
 #### Order Confirmation Validation
 ![Order Confirmation Validation](media/validation/validationorderconfirmation.PNG "Order Confirmation Validation")
 
@@ -267,6 +268,9 @@ The site underwent validation in a number of steps in order to ensure that the H
 #### Profile CSS Validation
 ![Profile CSS Validation](media/validation/validationprofilecss.PNG "Profile CSS Validation")
 
+### Javascript and Python/Django
+
+For Javascript and Python, both were ran through a linter and any errors were removed. For python, pep8 compliance was reached by running through validators and ensuring that the code compliant. 
 
 ### Usage Testing
 
@@ -277,6 +281,54 @@ The site underwent validation in a number of steps in order to ensure that the H
 * All code was checked to be of high quality and without errors.
 
 * Usage of every theoretical combination of functions in each order was done to ensure the site has a solid experience no matter how it is used by the user and all worked very well
+
+### Bug Fixes
+
+#### HTML
+
+1. When using the bootstrap template for the mobile header and after interacting with the 
+products and accounts sub menus within the mobile navbar, this would close the main navbar.
+This was resolved by changing the classes of the navbar and divs containing the nav elements to
+be more similar to that of the enclosed navbars. Changed From an anchor element with a class of 
+"nav-link" to a nav element with a class of "navbar". This allowed the navbar to remain open.
+
+2. The container classes from bootstrap were applied to the third and fourth elements within the mobile navbar, creating an inbalance within the appearence of the navbar thus requiring the addition of a div with the class of container wrapping the first and second li elements. This added the required classes and fixed the imbalance.
+
+3. The HTML file would be completely unstyled, however this was resolved by adding "{% load static %}" to the base.html to prevent any elements from being unstyled.
+
+4. When connecting the input within the form to the search query the information entered would not be processed and all products would show despite lack of relevence. The problem turned out to be a mismatch between the name searched for by the python search code and the name attribute on the inputs. This was fixed by matching the two.
+
+5. In the view_product.html, the image is normally meant to lead to a product.image.url, however this link was the same even with the noimage.png loaded in the absence of a product image. A fix to this was removing the anchor element around the noimage.png loader, as it is not necessary and can crash the application.
+
+#### CSS
+
+1. After creating the mobile header element, the content from the page would collapse below the header and would prevent reading of the top elements. This was resolved by adding a margin of 40px (the height of the mobile header) to the divs and other main body elements of the page on mobile.
+
+2. The products title had padding that when it crossed two lines ended up causing major disruption to the layout. A solution was removing the padding and modifyin the settings in the css file for its height.
+
+#### Javascript
+
+1. When creating the sliding image mainscreen, the code to check the current "left" alignment of the divs was originally set to detect when left is -100% before being moved to 200% to set the infinite cycle. A problem that occured in testing was that if the container did not go to -100% precisely, it would cycle left indefinitely. this was resolved by setting the code to check for any elements further left than -100%, preventing moving indefinitely, and allowing the cycle to be continued without error.
+
+#### PYTHON/Django
+
+1. When creating the shop model in django, the links were not functioning and the templates were not being reached when there was an attempt to go to the shop template. This was an error in usage of django, requiring the path being added to urls.py.
+
+2. After mistakenly placing the static folder within the palestra app, it was moved outside into the main project folder after failing to be accessed by other apps and this resolved any errors.
+
+3. When creating the filter function in views.py, an empty "categories" variable could be passed to the page when sorting is not present causing an error to occur. A solution to this was setting "categories = None" at the top of the function to prevent this error.
+
+4. During the creation of contexts.py for the bag app, the site would crash when trying to access the bag page. This was due to a variable referenced before assignment. For the sake of simplicity and before the variable can be established elsewhere, it was set to 0 before reference to prevent the site crashing before the grand_total variable can be created elsewhere.
+
+5. When creating the sorting bar for the mobile page, the code would not be read by the if functions as they previously were written {% if 'X' in request.get %}. However this proved to be incorrect and changing to {% if 'X' in request.get_full_path %} allowed it to function as intended.
+
+6. When creating the bag app there was an issue using the default django template calculations. {% widthratio item.product.price 1 item.quantity %} in the code originally rounded the subtotal, thus reducing accuracy. The solution was installing mathfilters and changing the code to ${{ item.product.price|mul:item.quantity }}, thus removing the rounding error.
+
+7. When creating the deletion form on the shopping bag, an error occured when trying to delete items of a certain size. Adding a hidden input that would send the product_value was used to resolve the problem. Originally there was an attempt to try use the dictionary key attribute to get the size which did not work.
+
+#### Existing bugs
+
+1. When using the sort items by selector on the shop, it will only sort by all items on the store, not within a subcategory.
 
 
 ## Deployment
@@ -386,56 +438,6 @@ Download the csv file supplied with access keys
 3. Inside click upload and add files, then select all images
 
 4. Now add the stripe secret keys to heroku
-
-
-## Bug report
-
-### HTML
-
-1. When using the bootstrap template for the mobile header and after interacting with the 
-products and accounts sub menus within the mobile navbar, this would close the main navbar.
-This was resolved by changing the classes of the navbar and divs containing the nav elements to
-be more similar to that of the enclosed navbars. Changed From an anchor element with a class of 
-"nav-link" to a nav element with a class of "navbar". This allowed the navbar to remain open.
-
-2. The container classes from bootstrap were applied to the third and fourth elements within the mobile navbar, creating an inbalance within the appearence of the navbar thus requiring the addition of a div with the class of container wrapping the first and second li elements. This added the required classes and fixed the imbalance.
-
-3. The HTML file would be completely unstyled, however this was resolved by adding "{% load static %}" to the base.html to prevent any elements from being unstyled.
-
-4. When connecting the input within the form to the search query the information entered would not be processed and all products would show despite lack of relevence. The problem turned out to be a mismatch between the name searched for by the python search code and the name attribute on the inputs. This was fixed by matching the two.
-
-5. In the view_product.html, the image is normally meant to lead to a product.image.url, however this link was the same even with the noimage.png loaded in the absence of a product image. A fix to this was removing the anchor element around the noimage.png loader, as it is not necessary and can crash the application.
-
-### CSS
-
-1. After creating the mobile header element, the content from the page would collapse below the header and would prevent reading of the top elements. This was resolved by adding a margin of 40px (the height of the mobile header) to the divs and other main body elements of the page on mobile.
-
-2. The products title had padding that when it crossed two lines ended up causing major disruption to the layout. A solution was removing the padding and modifyin the settings in the css file for its height.
-
-### Javascript
-
-1. When creating the sliding image mainscreen, the code to check the current "left" alignment of the divs was originally set to detect when left is -100% before being moved to 200% to set the infinite cycle. A problem that occured in testing was that if the container did not go to -100% precisely, it would cycle left indefinitely. this was resolved by setting the code to check for any elements further left than -100%, preventing moving indefinitely, and allowing the cycle to be continued without error.
-
-
-### PYTHON/Django
-
-1. When creating the shop model in django, the links were not functioning and the templates were not being reached when there was an attempt to go to the shop template. This was an error in usage of django, requiring the path being added to urls.py.
-
-2. After mistakenly placing the static folder within the palestra app, it was moved outside into the main project folder after failing to be accessed by other apps and this resolved any errors.
-
-3. When creating the filter function in views.py, an empty "categories" variable could be passed to the page when sorting is not present causing an error to occur. A solution to this was setting "categories = None" at the top of the function to prevent this error.
-
-4. During the creation of contexts.py for the bag app, the site would crash when trying to access the bag page. This was due to a variable referenced before assignment. For the sake of simplicity and before the variable can be established elsewhere, it was set to 0 before reference to prevent the site crashing before the grand_total variable can be created elsewhere.
-
-5. When creating the sorting bar for the mobile page, the code would not be read by the if functions as they previously were written {% if 'X' in request.get %}. However this proved to be incorrect and changing to {% if 'X' in request.get_full_path %} allowed it to function as intended.
-
-6. When creating the bag app there was an issue using the default django template calculations. ${% widthratio item.product.price 1 item.quantity %} in the code originally rounded the subtotal, thus reducing accuracy. The solution was installing mathfilters and changing the code to ${{ item.product.price|mul:item.quantity }}, thus removing the rounding error.
-
-7. When creating the deletion form on the shopping bag, an error occured when trying to delete items of a certain size. Adding a hidden input that would send the product_value was used to resolve the problem. Originally there was an attempt to try use the dictionary key attribute to get the size which did not work.
-
-### Existing bugs
-
-1. When using the sort items by selector on the shop, it will only sort by all items on the store, not within a subcategory.
 
 
 ## Credits
