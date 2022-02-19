@@ -12,7 +12,7 @@ This site (Palestra Fitness) is to be a fitness themed site that offers products
 
 3. As an external user, I want strong features with a draw to keep coming back to, so that the site will be a more welcoming and engaging site on which to be on.
 
-4. As an external user, I want the ability to buy subscriptions in the store so that I can get a consistant use of a product that I enjoy.
+4. As an external user, I want the ability to buy subscriptions in the store so that I can get a consistent use of a product that I enjoy.
 
 
 ### Site owner's goal:
@@ -22,7 +22,7 @@ subscription and individual payments models so that people continue returning to
 
 2. As a site owner, I want to sell products so that the site can begin to make profit.
 
-3. As a site owner, I want to sell exercise plans so that the sites users can access specialised fitness content.
+3. As a site owner, I want to sell exercise plans so that the site's users can access specialised fitness content.
 
 4. As a site owner, I want to sell nutrition plans so that the users of the site can supplement their exercise plans.
 
@@ -122,16 +122,11 @@ subscription and individual payments models so that people continue returning to
 ![JSON Category Layout](media/JSON_Catagory_layout.png "JSON Category Layout")
 
 
-## Features
-
-
-
-
 ## Design
 
-* Roboto by google fonts was chosen due to its strong, industrial appearence, being suitable to a gym website
+* Roboto by google fonts was chosen due to its strong, industrial appearance, being suitable to a gym website
 
-* Icons from fontawesome will be used to create a more user friendly and aesthetically pleasing appearence
+* Icons from fontawesome will be used to create a more user friendly and aesthetically pleasing appearance
 
 * Colours will be blue and white predominantly, due to being in strong association with fitness and health.
 
@@ -153,11 +148,11 @@ subscription and individual payments models so that people continue returning to
 * Postgres within Heroku will be used to store the database of the project, and all of its information.
 
 ### Amazon web services
-* The amazon web services will be used to store all images related to the project. It is accessable by superusers to add and delete images.
+* The amazon web services will be used to store all images related to the project. It is accessible by superusers to add and delete images.
 
 ### Django
 * Django was used as the basis of the project and its technologies make up the backbone of the entire project. A lot of its other technologies
-* Djangos countries, crispy-forms, allauth, countries, mathfilters and others were used within the framework to create forms, add logins, add a country list and to change the appearence of numbers and dates within the site.
+* Django's countries, crispy-forms, allauth, countries, mathfilters and others were used within the framework to create forms, add logins, add a country list and to change the appearance of numbers and dates within the site.
 
 ### dj-database-url and boto3
 * Both were used in the process of initalising the deployment of the project to heroku and for the use of postgres.
@@ -173,13 +168,53 @@ subscription and individual payments models so that people continue returning to
 
 ## Features
 
-* Very high level of functionality and aesthetics across all platforms.
-* A large variety within the site for a user.
-* The ability to create an account and log in/out at will.
-* Ability for an administrator to edit and delete items on the website.
-* A shop and ability to edit the cart before buying.
-* A blog, with a full comment system to use.
-* A search function to browse the store within the site.
+### Base Features
+* A nav bar that changes between desktop and mobile versions and allows smooth navigation through the site. Within the mobile version, the navbar dropdown menu features the product categories, to provide a cleaner user experience when using the shop on a mobile device.
+
+* A search function to browse the store on the site is present on the html template, meaning quick access to a user is available at all points on the site.
+
+### Home Page
+* A scrolling image with a display in the middle informing users of different featured items on the site that changes every 5 seconds, enticing a user to explore the site.
+
+### Shop
+* A clean layout, with all the products displayed clearly, changing the number per row on desktop and mobile (from 3 on a large screen to 1 in a row on a small screen). On desktop, the selection to explore item categories is displayed on the left of the screen. Each item on display has its name, price, rating and category displayed within its div. When logged in as a superuser on the site, the edit and delete options are also displayed.
+
+* The ability to sort items by price, category and rating are implemented and displayed at the top of the shop page.
+
+* When viewing a product, a user can add a review, or a simple rating and see previous reviews.
+
+* On the product view page, the user can add the item to the bag.
+
+* For products with no, or a missing image, a default image is loaded in place to prevent the layout of the page from being disrupted.
+
+### Blog
+* The add post form is available to the user at the very top of the page.
+
+* A section for recent posts is below the add post form, and has all posts recently added to the site listed with an option to click on the title and see the post and its comments in detail.
+
+* A user can comment on a specific post, and the comments will appear under the aformentioned post.
+
+### Bag
+* The user can see what items they have added to the bag, and delete them within the bag.
+
+### Checkout
+* The checkout page has the products the user has added to the bag displayed.
+
+* The credit card and details are placed under the bag list, and there is also an option to save the shipping information submitted to the user's profile if they are logged in.
+
+* If the user is logged in, the information they have saved to their profile is automatically loaded into the shipping information section during checkout.
+
+### Profile
+* A signed in user can see their previous orders saved to the profile, and have the option to view and update shipping information.
+
+### Signup/Login
+* The site permits the use of creating a user, using an email confirmation to allow the use of the profile. 
+
+### Superuser
+* A superuser has the option to add and delete products within the site itself, with changes taking place instantly.
+
+* The superuser also has the option to edit a product, with a preview image within the editing page to see the previous product image.
+
 
 ## Testing
 
@@ -187,11 +222,11 @@ subscription and individual payments models so that people continue returning to
 
 #### External user
 
-1. Joining a community was made very possibile by the ability to join forums, comment and post.
+1. Joining a community was made very possible by the ability to join forums, comment and post.
 
-2. The shop is the most prominant part of the site arguably and very accessable to all users.
+2. The shop is the most prominent part of the site arguably and very accessible to all users.
 
-3. Very strong features that make coming back to the site, for any number of different uses very tempting to a user and creates a good sense of variety.
+3. Very strong features that make coming back to the site, for any number of different uses, very tempting to a user and creates a good sense of variety.
 
 4. Subscriptions and their skus are listed on the store where the user can find them very easily.
 
@@ -201,25 +236,25 @@ subscription and individual payments models so that people continue returning to
 
 2. The shop makes selling a wide range of products very simple.
 
-3. The store has an entire section dedicated to exercise plans meaning they cant be missed. And with a prominant advertisement on the homepage.
+3. The store has an entire section dedicated to exercise plans meaning they can't be missed. And with a prominent advertisement on the homepage.
 
 4. As with the exercise plans, the nutrition plans have their own section and are very much able to be accessed with ease.
 
-5. The other sections of the store dedicated to these types of fitness merchandise are available and featured prominantly.
+5. The other sections of the store dedicated to these types of fitness merchandise are available and featured prominently.
 
 ### Validation
 
 The site underwent validation in a number of steps in order to ensure that the HTML was error free and highly functional. Each page followed a number of steps outlined below as to how they were validated.
 
-1. The first step was to place the link into the W3C validator, and seeing what errors are present. After clearing these, the errors were then cleared and then the next step was commenced.
+1. The first step was to place the link into the W3C validator, and see what errors are present. After clearing these, the errors were then cleared and then the next step was commenced.
 
-2. The next part of the html validation was to go into google chromes developer tools, and click source. After opening the code running behind the page, it was then copy and pasted into the html validators raw input mode. This ensures that the html is being validated, even accounting for any possible variance.
+2. The next part of the html validation was to go into google chrome's developer tools, and click source. After opening the code running behind the page, it was then copied and pasted into the html validators raw input mode. This ensures that the html is being validated, even accounting for any possible variance.
 
-3. The third step is an extension on the second. On a page, for example, the bag or blog for example where the content can vary, using the dev tools source code and checking multiple combinations of variations on each page was very useful. The bag page for instance was tested with multiple different quantities of items, different sizes, and with many different varieties of bag contents to ensure the html was secure and error free.
+3. The third step is an extension of the second. On a page, for example, the bag or blog for example where the content can vary, using the dev tools source code and checking multiple combinations of variations on each page was very useful. The bag page for instance was tested with multiple different quantities of items, different sizes, and with many different varieties of bag contents to ensure the html was secure and error free.
 
 4. After the validation of the HTML was finished, the CSS was ran through the W3C CSS validator and ran without issue.
 
-5. The views.py contents in each django app were ran through the validator on pep8online.com to ensure that the python code was pep8 compliant and well structed. This was in combination with a linter to ensure the content was as of high quality as possible.
+5. The views.py contents in each django app were run through the validator on pep8online.com to ensure that the python code was pep8 compliant and well structured. This was in combination with a linter to ensure the content was as of high quality as possible.
 
 ### HTML Validation
 
@@ -277,17 +312,17 @@ For the checkout validation, it was necessary to leave this h1 element empty due
 
 ### Javascript and Python/Django
 
-For Javascript and Python, both were ran through a linter and any errors were removed. For python, pep8 compliance was reached by running through validators and ensuring that the code compliant. 
+For Javascript and Python, both were run through a linter and any errors were removed. For python, pep8 compliance was reached by running through validators and ensuring that the code was compliant. 
 
 ### Usage Testing
 
-* The website was tested across a large amount of different screen sizes to ensure functions all work, and the absence of dead links or any poor layouts. It was assured to be working on many that could not be checked on physical devices using googles dev tools, using 320px as a minimum width to ensure all layouts stay of high quality for.
+* The website was tested across a large number of different screen sizes to ensure functions all work, and the absence of dead links or any poor layouts. It was assured to be working on many that could not be checked on physical devices using google's dev tools, using 320px as a minimum width to ensure all layouts stay of high quality for.
 
 * 4 devices were used to test the project, two windows computers and two android phones and all functions of the website were perfectly operational. All functions and features of the website were tested on these devices thoroughly and with care to make sure nothing could potentially cause errors specific to mobile for example.
 
-* Usage of every theoretical combination of functions in each order was done to ensure the site has a solid experience no matter how it is used by the user and all worked very well. For example, exiting mid way through payment to go to the blog, posting a review and going to the home page et cetera. In essense, assuring that any possible way a user could use the site is not going to create any errors.
+* Usage of every theoretical combination of functions in each order was done to ensure the site has a solid experience no matter how it is used by the user and all worked very well. For example, exiting mid way through payment to go to the blog, posting a review and going to the home page et cetera. In essence, assuring that any possible way a user could use the site is not going to create any errors.
 
-### Bug Fixes
+### Bugs Fixed
 
 #### HTML
 
@@ -297,11 +332,11 @@ This was resolved by changing the classes of the navbar and divs containing the 
 be more similar to that of the enclosed navbars. Changed From an anchor element with a class of 
 "nav-link" to a nav element with a class of "navbar". This allowed the navbar to remain open.
 
-2. The container classes from bootstrap were applied to the third and fourth elements within the mobile navbar, creating an inbalance within the appearence of the navbar thus requiring the addition of a div with the class of container wrapping the first and second li elements. This added the required classes and fixed the imbalance.
+2. The container classes from bootstrap were applied to the third and fourth elements within the mobile navbar, creating an imbalance within the appearance of the navbar thus requiring the addition of a div with the class of container wrapping the first and second li elements. This added the required classes and fixed the imbalance.
 
 3. The HTML file would be completely unstyled, however this was resolved by adding "{% load static %}" to the base.html to prevent any elements from being unstyled.
 
-4. When connecting the input within the form to the search query the information entered would not be processed and all products would show despite lack of relevence. The problem turned out to be a mismatch between the name searched for by the python search code and the name attribute on the inputs. This was fixed by matching the two.
+4. When connecting the input within the form to the search query the information entered would not be processed and all products would show despite lack of relevance. The problem turned out to be a mismatch between the name searched for by the python search code and the name attribute on the inputs. This was fixed by matching the two.
 
 5. In the view_product.html, the image is normally meant to lead to a product.image.url, however this link was the same even with the noimage.png loaded in the absence of a product image. A fix to this was removing the anchor element around the noimage.png loader, as it is not necessary and can crash the application.
 
@@ -309,11 +344,11 @@ be more similar to that of the enclosed navbars. Changed From an anchor element 
 
 1. After creating the mobile header element, the content from the page would collapse below the header and would prevent reading of the top elements. This was resolved by adding a margin of 40px (the height of the mobile header) to the divs and other main body elements of the page on mobile.
 
-2. The products title had padding that when it crossed two lines ended up causing major disruption to the layout. A solution was removing the padding and modifyin the settings in the css file for its height.
+2. The product's title had padding that when it crossed two lines ended up causing major disruption to the layout. A solution was removing the padding and modifying the settings in the css file for its height.
 
 #### Javascript
 
-1. When creating the sliding image mainscreen, the code to check the current "left" alignment of the divs was originally set to detect when left is -100% before being moved to 200% to set the infinite cycle. A problem that occured in testing was that if the container did not go to -100% precisely, it would cycle left indefinitely. this was resolved by setting the code to check for any elements further left than -100%, preventing moving indefinitely, and allowing the cycle to be continued without error.
+1. When creating the sliding image mainscreen, the code to check the current "left" alignment of the divs was originally set to detect when left is -100% before being moved to 200% to set the infinite cycle. A problem that occured in testing was that if the container did not go to -100% precisely, it would cycle left indefinitely. This was resolved by setting the code to check for any elements further left than -100%, preventing moving indefinitely, and allowing the cycle to be continued without error.
 
 #### PYTHON/Django
 
