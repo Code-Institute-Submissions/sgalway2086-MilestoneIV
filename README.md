@@ -1,6 +1,6 @@
 # Milestone 4
 
-This site (Palestra Fitness) is to be a fitness themed site that offers products for sale, and places for people to connect over the common interest of fitness.
+This site (Palestra Fitness) is to be a fitness themed site that offers products for sale, and places for people to connect over the common interest of fitness. The focus will be on a shop with nutritional/plan subscriptions and a blog and a strong user interactivity.
 
 ## User Stories
 
@@ -27,6 +27,7 @@ subscription and individual payments models so that people continue returning to
 4. As a site owner, I want to sell nutrition plans so that the users of the site can supplement their exercise plans.
 
 5. As a site owner, I want to sell nutrition and exercise products so that the site is able to draw a profit and cultivate returning users.
+
 
 ## Wireframes
 
@@ -104,6 +105,7 @@ subscription and individual payments models so that people continue returning to
 
 
 ## Database Layout
+
 ### Blog Database
 ![Database Blog Layout](media/databaseinformation/databaseblog.PNG "Database Blog Layout")
 
@@ -118,6 +120,11 @@ subscription and individual payments models so that people continue returning to
 
 ### JSON Product Categories
 ![JSON Category Layout](media/JSON_Catagory_layout.png "JSON Category Layout")
+
+
+## Features
+
+
 
 
 ## Design
@@ -274,13 +281,11 @@ For Javascript and Python, both were ran through a linter and any errors were re
 
 ### Usage Testing
 
-* The website was tested across a large amount of different screen sizes to ensure functions all work, and the absence of dead links or any poor layouts.
+* The website was tested across a large amount of different screen sizes to ensure functions all work, and the absence of dead links or any poor layouts. It was assured to be working on many that could not be checked on physical devices using googles dev tools, using 320px as a minimum width to ensure all layouts stay of high quality for.
 
-* 4 devices were used to test the project, two windows computers and two android phones and all functions of the website were perfectly operational
+* 4 devices were used to test the project, two windows computers and two android phones and all functions of the website were perfectly operational. All functions and features of the website were tested on these devices thoroughly and with care to make sure nothing could potentially cause errors specific to mobile for example.
 
-* All code was checked to be of high quality and without errors.
-
-* Usage of every theoretical combination of functions in each order was done to ensure the site has a solid experience no matter how it is used by the user and all worked very well
+* Usage of every theoretical combination of functions in each order was done to ensure the site has a solid experience no matter how it is used by the user and all worked very well. For example, exiting mid way through payment to go to the blog, posting a review and going to the home page et cetera. In essense, assuring that any possible way a user could use the site is not going to create any errors.
 
 ### Bug Fixes
 

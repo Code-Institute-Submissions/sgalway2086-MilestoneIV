@@ -374,8 +374,7 @@ footer{
     }
 
     #homeDisplay{
-        height: calc(100vh - 105px);
-        margin-top: 40px;
+        height: calc(100vh - 65px);
     }
 
     .nav-option-mobile{
