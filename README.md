@@ -163,6 +163,9 @@ subscription and individual payments models so that people continue returning to
 ### Favicon.cc
 * This site was used to make the favicon for the site.
 
+### Microsoft Paint
+* This was used to build all the wireframes for the project.
+
 ### Google Chrome Development Tools
 * Used heavily to test site responsiveness across many different screen sizes, and to inspect any possible layout irregularities with its ability to examine code line by line, and add or remove in the environment to see how it displays.
 
